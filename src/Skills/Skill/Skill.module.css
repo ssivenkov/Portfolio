@@ -1,0 +1,34 @@
+.generalContainer {
+    margin: 10px;
+    max-width: 270px;
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #fff;
+}
+
+.title {
+    font-size: 20px;
+}
+
+.image {
+    max-width: 100px;
+    user-select: none;
+    border-radius: 10px;
+}
+
+.descriptionContainer {
+    width: 100%;
+    padding: 5px 10px;
+    background-color: #fff;
+    border: 1px solid red;
+}
+
+.descriptionText {
+    font-size: 16px;
+}

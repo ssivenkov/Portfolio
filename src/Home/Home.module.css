@@ -1,0 +1,28 @@
+.generalContainer {
+    display: flex;
+    justify-content: center;
+    background-color: #70b2e5;
+}
+
+.contentContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+    width: 1000px;
+    border: 2px solid #000;
+}
+
+.photo {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    user-select: none;
+}
+
+.text {
+    font-size: 20px;
+    padding: 15px;
+    border: 2px solid #000;
+}
