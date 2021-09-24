@@ -1,7 +1,7 @@
 .generalContainer {
     display: flex;
     justify-content: center;
-    background-color: #717fef;
+    background-color: #6886d4;
 }
 
 .contentContainer {
@@ -9,8 +9,10 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
     width: 1000px;
     border: 2px solid #000;
+    padding-bottom: 30px;
 }
 
 .title {
@@ -20,11 +22,25 @@
     background-color: #ccc;
 }
 
-.skillsContainer {
+.formContainer {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
-    flex-wrap: wrap;
     width: 100%;
-    padding: 30px 0;
+    max-width: 450px;
     border: 1px solid #000;
+}
+
+.input {
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 5px 8px;
+}
+
+.textarea {
+    font-size: 16px;
+    width: 100%;
+    padding: 5px 8px;
+    resize: none;
 }

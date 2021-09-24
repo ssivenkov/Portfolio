@@ -16,6 +16,7 @@
 .title {
     font-size: 20px;
     margin: 10px 0;
+    padding: 5px 10px;
     background-color: #ccc;
 }
 
@@ -24,6 +25,6 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     width: 100%;
-    padding: 20px 0;
+    padding: 30px 0;
     border: 1px solid #000;
 }

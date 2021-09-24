@@ -1,14 +1,17 @@
 .generalContainer {
     display: flex;
     justify-content: center;
-    background-color: #717fef;
+    align-items: center;
+    min-height: 80px;
+    background-color: #539ec1;
 }
 
 .contentContainer {
     display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
     width: 1000px;
     border: 2px solid #000;
 }
@@ -20,11 +23,26 @@
     background-color: #ccc;
 }
 
-.skillsContainer {
+.iconsContainer {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     width: 100%;
-    padding: 30px 0;
+    max-width: 450px;
+    padding: 20px 0;
+    margin-bottom: 10px;
     border: 1px solid #000;
+}
+
+.link {
+    color: midnightblue;
+    font-size: 45px;
+}
+
+.link:hover {
+    color: #3245e2;
+}
+
+.link:active {
+    color: #40e2ff;
 }
