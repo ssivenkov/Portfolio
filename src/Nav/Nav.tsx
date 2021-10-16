@@ -1,13 +1,23 @@
-import React from 'react';
-import s from './Nav.module.css'
+import React from "react";
+import s from "./Nav.module.scss"
 
 export const Nav = () => {
     return (
         <div className={s.generalContainer}>
-            <a href={""} className={s.item}>Home</a>
-            <a href={""} className={s.item}>Skills</a>
-            <a href={""} className={s.item}>Projects</a>
-            <a href={""} className={s.item}>Contacts</a>
+            <div className={s.contentContainer}>
+                <div className={s.itemContainer}>
+                    <span className={s.itemText}>Home</span>
+                </div>
+                <div className={s.itemContainer}>
+                    <span className={s.itemText}>Skills</span>
+                </div>
+                <div className={s.itemContainer}>
+                    <span className={s.itemText}>Projects</span>
+                </div>
+                <div className={s.itemContainer}>
+                    <span className={s.itemText}>Contacts</span>
+                </div>
+            </div>
         </div>
     );
 }

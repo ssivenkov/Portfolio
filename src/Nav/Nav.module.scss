@@ -1,0 +1,34 @@
+.generalContainer {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #89dfff;
+}
+
+.contentContainer {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    min-height: 80px;
+    max-height: 100px;
+}
+
+.itemContainer {
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+    font-family: "Lato", sans-serif;
+    padding: 0 30px;
+    line-height: 1.2;
+    cursor: pointer;
+    &:hover {
+        background-color: #fff;
+    }
+}
+
+.itemText {
+    padding-bottom: 4px;
+}
