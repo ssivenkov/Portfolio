@@ -1,9 +1,13 @@
 .generalContainer {
     display: flex;
     justify-content: center;
-    background-color: #0E1111;
+    background-color: var(--background_color);
     width: 100%;
     height: 100vh;
+    background: no-repeat center/cover url("../assets/images/bg.jpg");
+    &:after {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
 }
 
 .contentContainer {
@@ -34,6 +38,7 @@
     font-weight: 600;
     font-family: "Hind Siliguri", sans-serif;
     line-height: 80px;
+    text-align: center;
     color: #fff;
     margin-top: 30px;
 }
@@ -42,5 +47,7 @@
     font-size: 24px;
     font-family: "Lato", sans-serif;
     letter-spacing: 2px;
+    line-height: 1.1;
+    text-align: center;
     color: rgba(255, 255, 255, 0.66);
 }

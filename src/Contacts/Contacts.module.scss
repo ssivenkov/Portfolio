@@ -1,46 +1,182 @@
 .generalContainer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    background-color: #6886d4;
+    align-items: center;
+    background-color: var(--background_color);
+}
+
+.title {
+    font-size: 54px;
+    font-weight: 600;
+    font-family: "Hind Siliguri", sans-serif;
+    line-height: 80px;
+    color: #fff;
+    margin: 15px 0;
 }
 
 .contentContainer {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    width: 1000px;
-    border: 2px solid #000;
-    padding-bottom: 30px;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 50px;
 }
 
-.title {
-    font-size: 20px;
-    margin: 10px 0;
-    padding: 5px 10px;
-    background-color: #ccc;
+.linksContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 12px 0;
+    border: 2px solid var(--primary_color);
+    border-radius: 100px;
+    background-color: #000;
+    &Text {
+        color: #fff;
+        font-size: 30px;
+        font-weight: 600;
+        font-family: "Hind Siliguri", sans-serif;
+        line-height: 1.1;
+        padding: 10px 69px 10px 19px;
+    }
+    &Icon {
+        position: absolute;
+        right: -1px;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 55px;
+        height: 55px;
+        font-size: 40px;
+        border-radius: 50%;
+        color: #000;
+        background-color: var(--primary_color);
+    }
+    &IconSmall {
+        font-size: 35px;
+    }
+    &:hover {
+        border: 2px solid var(--primary_light_color);
+        box-shadow: 0 0 13px 1px var(--primary_color);
+        text-shadow: 0 0 15px var(--primary_color);
+    }
+    &:active {
+        color: #40e2ff;
+    }
+}
+
+/*.link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 12px 0;
+    border: 2px solid var(--primary_color);
+    border-radius: 100px;
+    &Text {
+        color: #fff;
+        font-size: 30px;
+        font-weight: 600;
+        font-family: "Hind Siliguri", sans-serif;
+        line-height: 1.1;
+        padding: 0 15px;
+    }
+    &Icon {
+        color: #000;
+        font-size: 40px;
+        border-radius: 50%;
+        padding: 6px 9px;
+        background-color: var(--primary_color);
+    }
+    &:hover {
+        border: 2px solid var(--primary_light_color);
+        box-shadow: 0 0 13px 1px var(--primary_color);
+        text-shadow: 0 0 15px var(--primary_color);
+    }
+    &:active {
+        color: #40e2ff;
+    }
+}*/
+
+.separator {
+    width: 2px;
+    height: 200px;
+    margin: 0 20px;
+    background-color: #fff;
 }
 
 .formContainer {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    width: 100%;
-    max-width: 450px;
-    border: 1px solid #000;
+    align-items: center;
+    max-width: 60%;
+}
+
+.inputContainer {
+    display: flex;
+    margin-bottom: 30px;
 }
 
 .input {
-    font-size: 16px;
+    color: #fff;
+    font-size: 18px;
+    font-family: "Lato", sans-serif;
     width: 100%;
-    margin-bottom: 15px;
-    padding: 5px 8px;
+    padding: 11px 20px;
+    border-radius: 30px;
+    background-color: #252525;
+    transition: .3s;
+    border: 2px solid transparent;
+    &:focus {
+        border: 2px solid var(--primary_color);
+    }
+    &Left {
+        margin-right: 15px;
+    }
+    &Right {
+        margin-left: 15px;
+    }
 }
 
 .textarea {
-    font-size: 16px;
+    color: #fff;
+    font-size: 18px;
     width: 100%;
-    padding: 5px 8px;
+    padding: 12px 20px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    background-color: #252525;
+    transition: .3s;
+    border: 2px solid transparent;
     resize: none;
+    &:focus {
+        border: 2px solid var(--primary_color);
+    }
+}
+
+.sendButton {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: "Hind Siliguri", sans-serif;
+    line-height: 1.1;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: #000;
+    border: 2px solid var(--primary_color);
+    &:hover {
+        border: 2px solid var(--primary_light_color);
+        box-shadow: 0 0 13px 1px var(--primary_color);
+        text-shadow: 0 0 15px var(--primary_color);
+    }
 }
