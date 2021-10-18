@@ -1,0 +1,50 @@
+@import '/src/App';
+
+.linkButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+    margin: 12px 0;
+    border: 2px solid var(--primary);
+    border-radius: 100px;
+    background-color: var(--background_dark);
+    @include no-select;
+    &Text {
+        color: var(--text);
+        font-size: 30px;
+        font-weight: 600;
+        font-family: "Hind Siliguri", sans-serif;
+        line-height: 1.1;
+        padding: 10px 69px 10px 19px;
+    }
+    &Icon {
+        position: absolute;
+        right: -1px;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 55px;
+        height: 55px;
+        font-size: 40px;
+        border-radius: 50%;
+        color: var(--background_dark);
+        background-color: var(--primary);
+    }
+    &IconSmall {
+        font-size: 35px;
+    }
+    &:hover {
+        border: 2px solid var(--primary_light);
+        box-shadow: 0 0 13px 1px var(--primary);
+        text-shadow: 0 0 15px var(--primary), 0 0 5px var(--primary);
+        .linkButtonIcon {
+            background-color: var(--primary_light);
+            text-shadow: 0 0 15px var(--primary_light);
+        }
+    }
+    &:active {
+        box-shadow: 0 0 9px 1px var(--primary_light);
+    }
+}

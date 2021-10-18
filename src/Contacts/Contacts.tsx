@@ -1,30 +1,30 @@
 import React from "react";
 import s from "./Contacts.module.scss"
+import { LinkButton } from "./LinkButton/LinkButton";
+import { Title } from "../commonComponents/Title/Title";
 
 export const Contacts = () => {
     return (
         <div className={s.generalContainer}>
-            <span className={s.title}>Contacts</span>
+            <Title title={"Contacts"}/>
             <div className={s.contentContainer}>
                 <div className={s.linksContainer}>
-                    <a className={s.link} href="https://www.linkedin.com/in/ssivenkov" target="_blank">
-                        <span className={s.linkText}>LinkedIn</span>
-                        <span className={`${s.linkIcon} ${s.linkIconSmall} fab fa-linkedin-in`}></span>
-                    </a>
-                    <a className={s.link} href="https://t.me/sergei_sivenkov" target="_blank">
-                        <span className={s.linkText}>Telegram</span>
-                        <span className={`${s.linkIcon} fab fa-telegram`}></span>
-                    </a>
-                    <a className={s.link} href="https://github.com/ssivenkov" target="_blank">
-                        <span className={s.linkText}>GitHub</span>
-                        <span className={`${s.linkIcon} fab fa-github`}></span>
-                    </a>
-                    <a className={s.link} href="https://wa.me/375256778073" target="_blank">
-                        <span className={s.linkText}>WhatsApp</span>
-                        <span className={`${s.linkIcon} fab fa-whatsapp`}></span>
-                    </a>
+                    <LinkButton link={"https://www.linkedin.com/in/ssivenkov"}
+                                title={"LinkedIn"}
+                                iconClass={"fa-linkedin-in"}/>
+                    <LinkButton link={"https://t.me/sergei_sivenkov"}
+                                title={"Telegram"}
+                                iconClass={"fa-telegram"}/>
+                    <LinkButton link={"https://github.com/ssivenkov"}
+                                title={"GitHub"}
+                                iconClass={"fa-github"}/>
+                    <LinkButton link={"https://wa.me/375256778073"}
+                                title={"WhatsApp"}
+                                iconClass={"fa-whatsapp"}/>
                 </div>
+
                 <div className={s.separator}></div>
+
                 <form className={s.formContainer} action="">
                     <div className={s.inputContainer}>
                         <input className={`${s.input} ${s.inputLeft}`} type="text" placeholder={"YOUR NAME"}/>

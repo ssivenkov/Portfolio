@@ -1,18 +1,11 @@
+@import '/src/App';
+
 .generalContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--background_color);
-}
-
-.title {
-    font-size: 54px;
-    font-weight: 600;
-    font-family: "Hind Siliguri", sans-serif;
-    line-height: 80px;
-    color: #fff;
-    margin: 15px 0;
+    background-color: var(--background);
 }
 
 .contentContainer {
@@ -32,87 +25,12 @@
     flex-wrap: wrap;
 }
 
-.link {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    margin: 12px 0;
-    border: 2px solid var(--primary_color);
-    border-radius: 100px;
-    background-color: #000;
-    &Text {
-        color: #fff;
-        font-size: 30px;
-        font-weight: 600;
-        font-family: "Hind Siliguri", sans-serif;
-        line-height: 1.1;
-        padding: 10px 69px 10px 19px;
-    }
-    &Icon {
-        position: absolute;
-        right: -1px;
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-        width: 55px;
-        height: 55px;
-        font-size: 40px;
-        border-radius: 50%;
-        color: #000;
-        background-color: var(--primary_color);
-    }
-    &IconSmall {
-        font-size: 35px;
-    }
-    &:hover {
-        border: 2px solid var(--primary_light_color);
-        box-shadow: 0 0 13px 1px var(--primary_color);
-        text-shadow: 0 0 15px var(--primary_color);
-    }
-    &:active {
-        color: #40e2ff;
-    }
-}
-
-/*.link {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    margin: 12px 0;
-    border: 2px solid var(--primary_color);
-    border-radius: 100px;
-    &Text {
-        color: #fff;
-        font-size: 30px;
-        font-weight: 600;
-        font-family: "Hind Siliguri", sans-serif;
-        line-height: 1.1;
-        padding: 0 15px;
-    }
-    &Icon {
-        color: #000;
-        font-size: 40px;
-        border-radius: 50%;
-        padding: 6px 9px;
-        background-color: var(--primary_color);
-    }
-    &:hover {
-        border: 2px solid var(--primary_light_color);
-        box-shadow: 0 0 13px 1px var(--primary_color);
-        text-shadow: 0 0 15px var(--primary_color);
-    }
-    &:active {
-        color: #40e2ff;
-    }
-}*/
-
 .separator {
+    display: block;
     width: 2px;
     height: 200px;
     margin: 0 20px;
-    background-color: #fff;
+    background-color: var(--misc);
 }
 
 .formContainer {
@@ -128,17 +46,17 @@
 }
 
 .input {
-    color: #fff;
+    color: var(--text);
     font-size: 18px;
     font-family: "Lato", sans-serif;
     width: 100%;
     padding: 11px 20px;
     border-radius: 30px;
-    background-color: #252525;
+    background-color: var(--background_light);
     transition: .3s;
     border: 2px solid transparent;
     &:focus {
-        border: 2px solid var(--primary_color);
+        border: 2px solid var(--primary);
     }
     &Left {
         margin-right: 15px;
@@ -149,34 +67,35 @@
 }
 
 .textarea {
-    color: #fff;
+    color: var(--text);
     font-size: 18px;
     width: 100%;
     padding: 12px 20px;
     border-radius: 20px;
     margin-bottom: 30px;
-    background-color: #252525;
+    background-color: var(--background_light);
     transition: .3s;
     border: 2px solid transparent;
     resize: none;
     &:focus {
-        border: 2px solid var(--primary_color);
+        border: 2px solid var(--primary);
     }
 }
 
 .sendButton {
-    color: #fff;
+    color: var(--text);
     font-size: 25px;
     font-weight: 600;
     font-family: "Hind Siliguri", sans-serif;
     line-height: 1.1;
     padding: 10px 20px;
     border-radius: 30px;
-    background-color: #000;
-    border: 2px solid var(--primary_color);
+    background-color: var(--background_dark);
+    border: 2px solid var(--primary);
+    @include no-select;
     &:hover {
-        border: 2px solid var(--primary_light_color);
-        box-shadow: 0 0 13px 1px var(--primary_color);
-        text-shadow: 0 0 15px var(--primary_color);
+        border: 2px solid var(--primary_light);
+        box-shadow: 0 0 13px 1px var(--primary);
+        text-shadow: 0 0 15px var(--primary), 0 0 5px var(--primary);
     }
 }

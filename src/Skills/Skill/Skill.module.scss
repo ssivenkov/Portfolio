@@ -1,6 +1,10 @@
+@import '/src/App';
+
 .generalContainer {
-    margin: 10px;
+    margin: 15px;
     max-width: 270px;
+    background: linear-gradient(0deg, #777, #ccc, #ccc);
+    border-radius: 15px;
 }
 
 .contentContainer {
@@ -8,25 +12,26 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px 30px;
-    background-color: #fff;
+    padding: 20px 40px 10px;
 }
 
 .title {
-    font-size: 20px;
+    font-size: 22px;
+    font-family: "Hind Siliguri", sans-serif;
+    line-height: 1.2;
+    margin-top: 15px;
 }
 
 .image {
-    max-width: 100px;
-    user-select: none;
-    border-radius: 10px;
+    width: 90.5px; // for images
+    height: 90.5px;
+    @include no-select;
 }
 
 .descriptionContainer {
     width: 100%;
     padding: 5px 10px;
-    background-color: #fff;
-    border: 1px solid red;
+    border-top: 2px solid var(--primary);
 }
 
 .descriptionText {

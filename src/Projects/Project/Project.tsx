@@ -4,20 +4,20 @@ import s from './Project.module.scss'
 type ProjectPropsType = {
     title: string
     description: string
-    img: string
+    imageLink: string
+    link: string
 }
 
-export const Project = (props: ProjectPropsType) => {
+export const Project: React.FC<ProjectPropsType> = ({title, description, imageLink, link}) => {
     return (
         <div className={s.generalContainer}>
-            <div className={s.contentContainer}>
-                <div className={s.image}>
-                    <a href="" className={s.linkTitle}>View</a>
-                </div>
-                <span className={s.title}>{props.title}</span>
+            <div className={s.imageContainer}>
+                <img className={s.image} src={imageLink} alt={`${title} project`}/>
             </div>
             <div className={s.descriptionContainer}>
-                <span className={s.descriptionText}>{props.description}</span>
+                <span className={s.title}>{title}</span>
+                <span className={s.descriptionText}>{description}</span>
+                <a href={link} className={s.buttonTitle} target="_blank">View project</a>
             </div>
         </div>
     );

@@ -1,12 +1,24 @@
+@import '/src/App';
+
 .generalContainer {
     display: flex;
     justify-content: center;
-    background-color: var(--background_color);
+    position: relative;
+    background-color: var(--background);
     width: 100%;
     height: 100vh;
-    background: no-repeat center/cover url("../assets/images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../assets/images/bg.jpg");
     &:after {
-        background-color: rgba(0, 0, 0, 0.4);
+        position: absolute;
+        background: rgba(0, 0, 0, 0.4);
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        content: "";
+        z-index: 10;
     }
 }
 
@@ -29,8 +41,10 @@
     max-height: 15vw;
     object-fit: cover;
     border-radius: 50%;
-    border: 3px solid #fff;
+    border: 3px solid var(--misc);
     background-color: #fff;
+    @include no-select;
+    z-index: 20;
 }
 
 .firstLine {
@@ -39,8 +53,9 @@
     font-family: "Hind Siliguri", sans-serif;
     line-height: 80px;
     text-align: center;
-    color: #fff;
+    color: var(--text);
     margin-top: 30px;
+    z-index: 20;
 }
 
 .secondLine {
@@ -49,5 +64,7 @@
     letter-spacing: 2px;
     line-height: 1.1;
     text-align: center;
-    color: rgba(255, 255, 255, 0.66);
+    opacity: .66;
+    color: var(--text);
+    z-index: 20;
 }
