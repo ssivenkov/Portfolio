@@ -2,7 +2,7 @@
 
 .generalContainer {
     margin: 15px;
-    max-width: 270px;
+    width: 175px; // max-width: 200px;
     background: linear-gradient(0deg, #777, #ccc, #ccc);
     border-radius: 15px;
 }
@@ -12,28 +12,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px 40px 10px;
-}
-
-.title {
-    font-size: 22px;
-    font-family: "Hind Siliguri", sans-serif;
-    line-height: 1.2;
-    margin-top: 15px;
 }
 
 .image {
-    width: 90.5px; // for images
+    width: 90.5px; // float for correct displaying images
     height: 90.5px;
     @include no-select;
+    margin-top: 20px;
 }
 
-.descriptionContainer {
+.title {
     width: 100%;
-    padding: 5px 10px;
-    border-top: 2px solid var(--primary);
-}
-
-.descriptionText {
-    font-size: 16px;
+    font-size: 22px;
+    font-family: "Hind Siliguri", sans-serif;
+    line-height: 1.2;
+    text-align: center;
+    word-break: break-word;
+    padding: 15px 10px;
 }

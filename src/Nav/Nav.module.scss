@@ -23,8 +23,8 @@
     align-items: center;
     font-size: 26px;
     font-family: "Lato", sans-serif;
-    padding: 0 30px;
-    //line-height: 1.2;
+    padding-left: 30px;
+    padding-right: 30px;
     cursor: pointer;
     border-bottom: 3px solid transparent;
     &:hover {
@@ -40,4 +40,15 @@
     color: var(--text);
     padding-bottom: 3px;
     @include no-select;
+}
+
+@media screen and (max-width: 800px) {
+    .itemContainer {
+        @include adaptive-value("font-size", 800, 26, 20, 1);
+        @include adaptive-value("padding-left", 800, 30, 8, 1);
+        @include adaptive-value("padding-right", 800, 30, 8, 1);
+    }
+    .contentContainer {
+        @include adaptive-value("height", 800, 80, 50, 1);
+    }
 }

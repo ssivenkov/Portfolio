@@ -51,7 +51,7 @@
     font-size: 56px;
     font-weight: 600;
     font-family: "Hind Siliguri", sans-serif;
-    line-height: 80px;
+    line-height: 1.4;
     text-align: center;
     color: var(--text);
     margin-top: 30px;
@@ -67,4 +67,14 @@
     opacity: .66;
     color: var(--text);
     z-index: 20;
+}
+
+@media screen and (max-width: 800px) {
+    .firstLine {
+        @include adaptive-value("font-size", 800, 56, 25, 1);
+    }
+
+    .secondLine {
+        @include adaptive-value("font-size", 800, 24, 14, 1);
+    }
 }

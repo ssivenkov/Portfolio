@@ -11,14 +11,12 @@ type ProjectPropsType = {
 export const Project: React.FC<ProjectPropsType> = ({title, description, imageLink, link}) => {
     return (
         <div className={s.generalContainer}>
-            <div className={s.imageContainer}>
-                <img className={s.image} src={imageLink} alt={`${title} project`}/>
-            </div>
+            <img className={s.image} src={imageLink} alt={`${title} project`}/>
             <div className={s.descriptionContainer}>
                 <span className={s.title}>{title}</span>
                 <span className={s.descriptionText}>{description}</span>
-                <a href={link} className={s.buttonTitle} target="_blank">View project</a>
             </div>
+            <a href={link} className={s.buttonTitle} target="_blank">View project</a>
         </div>
     );
 }

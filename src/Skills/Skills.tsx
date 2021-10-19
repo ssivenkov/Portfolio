@@ -19,31 +19,22 @@ export const Skills = () => {
                 <Title title={"Skills"}/>
                 <div className={s.skillsContainer}>
                     <Skill title={"HTML"}
-                           description={"Description"}
                            imageLink={HTML}/>
                     <Skill title={"CSS"}
-                           description={"Description"}
                            imageLink={CSS}/>
                     <Skill title={"SASS"}
-                           description={"Description"}
                            imageLink={SASS}/>
                     <Skill title={"JavaScript"}
-                           description={"Description"}
                            imageLink={JS}/>
                     <Skill title={"TypeScript"}
-                           description={"Description"}
                            imageLink={TS}/>
                     <Skill title={"React"}
-                           description={"Description"}
                            imageLink={ReactJS}/>
                     <Skill title={"Redux"}
-                           description={"Description"}
                            imageLink={ReduxJS}/>
                     <Skill title={"Jest"}
-                           description={"Description"}
                            imageLink={Jest}/>
                     <Skill title={"Git"}
-                           description={"Description"}
                            imageLink={Git}/>
                 </div>
             </div>

@@ -14,7 +14,7 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    width: 100%;
+    width: 90vw;
     max-width: 800px;
     margin-bottom: 50px;
 }
@@ -29,7 +29,8 @@
     display: block;
     width: 2px;
     height: 200px;
-    margin: 0 20px;
+    margin-left: 20px;
+    margin-right: 20px;
     background-color: var(--misc);
 }
 
@@ -37,11 +38,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
     max-width: 60%;
 }
 
 .inputContainer {
+    width: 100%;
     display: flex;
+    flex-direction: row;
     margin-bottom: 30px;
 }
 
@@ -55,12 +59,15 @@
     background-color: var(--background_light);
     transition: .3s;
     border: 2px solid transparent;
+
     &:focus {
         border: 2px solid var(--primary);
     }
+
     &Left {
         margin-right: 15px;
     }
+
     &Right {
         margin-left: 15px;
     }
@@ -77,6 +84,7 @@
     transition: .3s;
     border: 2px solid transparent;
     resize: none;
+
     &:focus {
         border: 2px solid var(--primary);
     }
@@ -93,9 +101,51 @@
     background-color: var(--background_dark);
     border: 2px solid var(--primary);
     @include no-select;
+
     &:hover {
         border: 2px solid var(--primary_light);
         box-shadow: 0 0 13px 1px var(--primary);
         text-shadow: 0 0 15px var(--primary), 0 0 5px var(--primary);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .contentContainer {
+        flex-direction: column;
+    }
+
+    .linksContainer {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .separator {
+        width: 50vw;
+        height: 2px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+
+    .formContainer {
+        max-width: 100%;
+    }
+
+    .inputContainer {
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    .input {
+        margin-bottom: 20px;
+        &Right {
+            margin-left: 0;
+        }
+        &Left {
+            margin-right: 0;
+        }
     }
 }
