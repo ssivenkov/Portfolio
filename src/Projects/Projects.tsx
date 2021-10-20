@@ -8,7 +8,7 @@ import Temp from "../assets/images/Projects/temp.png"
 export const Projects = () => {
     return (
         <div className={s.generalContainer}>
-            <div className={s.contentContainer}>
+            <section className={s.contentContainer}>
                 <Title title={"Projects"}/>
                 <div className={s.projectsContainer}>
                     <Project title={"Social network"}
@@ -27,7 +27,7 @@ export const Projects = () => {
                              link={"https://veltry.site"}
                     />
                 </div>
-            </div>
+            </section>
         </div>
     );
 }

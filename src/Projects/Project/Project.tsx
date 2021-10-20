@@ -13,7 +13,7 @@ export const Project: React.FC<ProjectPropsType> = ({title, description, imageLi
         <div className={s.generalContainer}>
             <img className={s.image} src={imageLink} alt={`${title} project`}/>
             <div className={s.descriptionContainer}>
-                <span className={s.title}>{title}</span>
+                <h5 className={s.title}>{title}</h5>
                 <span className={s.descriptionText}>{description}</span>
             </div>
             <a href={link} className={s.buttonTitle} target="_blank">View project</a>

@@ -28,7 +28,6 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 50px 0;
     width: 100%;
 }
 
@@ -66,15 +65,17 @@
     text-align: center;
     opacity: .66;
     color: var(--text);
+    margin-top: 3px;
     z-index: 20;
 }
 
 @media screen and (max-width: 800px) {
     .firstLine {
-        @include adaptive-value("font-size", 800, 56, 25, 1);
+        @include adaptive-value("font-size", 800, 56, 25, px, 1);
     }
 
     .secondLine {
-        @include adaptive-value("font-size", 800, 24, 14, 1);
+        @include adaptive-value("font-size", 800, 24, 15, px, 1);
+        @include adaptive-value("margin-top", 800, 12, 6, px, 1);
     }
 }

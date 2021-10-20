@@ -15,7 +15,7 @@ import Jest from '../assets/images/Skills/Jest.svg'
 export const Skills = () => {
     return (
         <div className={s.generalContainer}>
-            <div className={s.contentContainer}>
+            <section className={s.contentContainer}>
                 <Title title={"Skills"}/>
                 <div className={s.skillsContainer}>
                     <Skill title={"HTML"}
@@ -37,7 +37,7 @@ export const Skills = () => {
                     <Skill title={"Git"}
                            imageLink={Git}/>
                 </div>
-            </div>
+            </section>
         </div>
     );
 }

@@ -6,5 +6,5 @@ type TitleType = {
 }
 
 export const Title: React.FC<TitleType> = ({title}) => {
-    return <span className={s.title}>{title}</span>
+    return <h3 className={s.title}>{title}</h3>
 }

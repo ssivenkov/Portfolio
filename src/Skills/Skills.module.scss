@@ -1,3 +1,5 @@
+@import '/src/App';
+
 .generalContainer {
     display: flex;
     justify-content: center;
@@ -11,7 +13,6 @@
     align-items: center;
     width: 1100px;
     max-width: 70vw;
-    // border: 1px solid orange;
 }
 
 .skillsContainer {
@@ -20,4 +21,10 @@
     flex-wrap: wrap;
     width: 100%;
     padding-bottom: 45px;
+}
+
+@media screen and (max-width: 1480px) {
+    .contentContainer {
+        @include adaptive-value("max-width", 1480, 70, 90, vw, 1);
+    }
 }

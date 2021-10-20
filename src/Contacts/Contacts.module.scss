@@ -101,8 +101,16 @@
     background-color: var(--background_dark);
     border: 2px solid var(--primary);
     @include no-select;
-
-    &:hover {
+}
+@media (pointer:coarse) {
+    .sendButton:active {
+        border: 2px solid var(--primary_light);
+        box-shadow: 0 0 13px 1px var(--primary);
+        text-shadow: 0 0 15px var(--primary), 0 0 5px var(--primary);
+    }
+}
+@media (pointer:fine) {
+    .sendButton:hover {
         border: 2px solid var(--primary_light);
         box-shadow: 0 0 13px 1px var(--primary);
         text-shadow: 0 0 15px var(--primary), 0 0 5px var(--primary);

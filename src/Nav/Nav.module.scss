@@ -27,11 +27,18 @@
     padding-right: 30px;
     cursor: pointer;
     border-bottom: 3px solid transparent;
-    &:hover {
-        background-color: var(--background_dark);
-    }
     &Active {
         border-bottom: 3px solid var(--primary);
+    }
+}
+@media (pointer:coarse) {
+    .itemContainer:active {
+        background-color: var(--background_dark);
+    }
+}
+@media (pointer:fine) {
+    .itemContainer:hover {
+        background-color: var(--background_dark);
     }
 }
 
@@ -44,11 +51,11 @@
 
 @media screen and (max-width: 800px) {
     .itemContainer {
-        @include adaptive-value("font-size", 800, 26, 20, 1);
-        @include adaptive-value("padding-left", 800, 30, 8, 1);
-        @include adaptive-value("padding-right", 800, 30, 8, 1);
+        @include adaptive-value("font-size", 800, 26, 20, px, 1);
+        @include adaptive-value("padding-left", 800, 30, 8, px, 1);
+        @include adaptive-value("padding-right", 800, 30, 8, px, 1);
     }
     .contentContainer {
-        @include adaptive-value("height", 800, 80, 50, 1);
+        @include adaptive-value("height", 800, 80, 50, px, 1);
     }
 }

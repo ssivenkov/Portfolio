@@ -5,7 +5,7 @@ import { Title } from "../commonComponents/Title/Title";
 
 export const Contacts = () => {
     return (
-        <div className={s.generalContainer}>
+        <footer className={s.generalContainer}>
             <Title title={"Contacts"}/>
             <div className={s.contentContainer}>
                 <div className={s.linksContainer}>
@@ -37,6 +37,6 @@ export const Contacts = () => {
                     </button>
                 </form>
             </div>
-        </div>
+        </footer>
     );
 }
