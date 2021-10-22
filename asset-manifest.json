@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.b9881ff5.chunk.css",
-    "main.js": "/Portfolio/static/js/main.507c0b2e.chunk.js",
-    "main.js.map": "/Portfolio/static/js/main.507c0b2e.chunk.js.map",
+    "main.js": "/Portfolio/static/js/main.3f156346.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.3f156346.chunk.js.map",
     "runtime-main.js": "/Portfolio/static/js/runtime-main.73a461cf.js",
     "runtime-main.js.map": "/Portfolio/static/js/runtime-main.73a461cf.js.map",
     "static/js/2.aea783dc.chunk.js": "/Portfolio/static/js/2.aea783dc.chunk.js",
@@ -20,7 +20,9 @@
     "static/media/React.5381e1ca.svg": "/Portfolio/static/media/React.5381e1ca.svg",
     "static/media/Redux.b42554ad.svg": "/Portfolio/static/media/Redux.b42554ad.svg",
     "static/media/SASS.992e4895.svg": "/Portfolio/static/media/SASS.992e4895.svg",
+    "static/media/Social network.5bd00e48.png": "/Portfolio/static/media/Social network.5bd00e48.png",
     "static/media/TS.21f37087.svg": "/Portfolio/static/media/TS.21f37087.svg",
+    "static/media/Todolist.930adc1b.png": "/Portfolio/static/media/Todolist.930adc1b.png",
     "static/media/avatar.a8f483df.jpg": "/Portfolio/static/media/avatar.a8f483df.jpg",
     "static/media/Home.module.scss": "/Portfolio/static/media/bg.0e16ac18.jpg",
     "static/media/veltry.f084d81d.jpg": "/Portfolio/static/media/veltry.f084d81d.jpg"
@@ -29,6 +31,6 @@
     "static/js/runtime-main.73a461cf.js",
     "static/js/2.aea783dc.chunk.js",
     "static/css/main.b9881ff5.chunk.css",
-    "static/js/main.507c0b2e.chunk.js"
+    "static/js/main.3f156346.chunk.js"
   ]
 }
