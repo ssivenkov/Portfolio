@@ -3,6 +3,8 @@ import s from "./Projects.module.scss"
 import { Project } from "./Project/Project";
 import { Title } from "../commonComponents/Title/Title";
 import Veltry from "../assets/images/Projects/veltry.jpg";
+import Social_network from "../assets/images/Projects/Social network.png"
+import Todolist from "../assets/images/Projects/Todolist.png"
 import Temp from "../assets/images/Projects/temp.png"
 
 export const Projects = () => {
@@ -13,12 +15,12 @@ export const Projects = () => {
                 <div className={s.projectsContainer}>
                     <Project title={"Social network"}
                              description={"Social network"}
-                             imageLink={Temp}
+                             imageLink={Social_network}
                              link={"https://ssivenkov.github.io/Social_network"}
                     />
                     <Project title={"TodoList"}
                              description={"TodoList"}
-                             imageLink={Temp}
+                             imageLink={Todolist}
                              link={"https://ssivenkov.github.io/TodoList"}
                     />
                     <Project title={"Veltry"}
