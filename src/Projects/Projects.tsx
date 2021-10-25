@@ -14,17 +14,20 @@ export const Projects = () => {
                 <Title title={"Projects"}/>
                 <div className={s.projectsContainer}>
                     <Project title={"Social network"}
-                             description={"Social network"}
+                             description={"SPA for social actions - messaging and blogging."}
+                             technologies={"SCSS, JavaScript, TypeScript, React, Redux, Redux-form, Axios"}
                              imageLink={Social_network}
                              link={"https://ssivenkov.github.io/Social_network"}
                     />
                     <Project title={"TodoList"}
-                             description={"TodoList"}
+                             description={"SPA for managing to-do lists and their items."}
+                             technologies={"SCSS, JavaScript, TypeScript, React, Redux"}
                              imageLink={Todolist}
                              link={"https://ssivenkov.github.io/TodoList"}
                     />
                     <Project title={"Veltry"}
-                             description={"Trip accessories store. Implemented: mobile first method, responsive design, PHP modular file system, SQL for product items and search items, sorting button for items, 404 page, hiding of pages file extensions, send mail script, custom scroll, modal window for enlarged product images, tooltips for buy buttons, search product items scripts(uses session storage to save scroll state for scroll to product type), cart scripts(uses local storage to save a list of cart items)."}
+                             description={"Trip goods store website. Implemented: mobile first method, responsive design, PHP modular file system, SQL for product items and search items, sorting button for items, 404 page, hiding of pages file extensions, send mail script, custom scroll, modal window for enlarged product images, tooltips for buy buttons, search product items scripts(uses session storage to save scroll state for scroll to product type), cart scripts(uses local storage to save a list of cart items)."}
+                             technologies={"HTML, SCSS, Gulp, JavaScript, PHP, SQL"}
                              imageLink={Veltry}
                              link={"https://veltry.site"}
                     />
