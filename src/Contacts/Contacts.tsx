@@ -2,6 +2,7 @@ import React from "react";
 import s from "./Contacts.module.scss"
 import { LinkButton } from "./LinkButton/LinkButton";
 import { Title } from "../commonComponents/Title/Title";
+import { ContactForm } from "./ContactForm/ContactForm";
 
 export const Contacts = () => {
     return (
@@ -22,20 +23,9 @@ export const Contacts = () => {
                                 title={"WhatsApp"}
                                 iconClass={"fa-whatsapp"}/>
                 </div>
-
                 <div className={s.separator}></div>
-
-                <form className={s.formContainer} action="">
-                    <div className={s.inputContainer}>
-                        <input className={`${s.input} ${s.inputLeft}`} type="text" placeholder={"YOUR NAME"}/>
-                        <input className={`${s.input} ${s.inputRight}`} type="text" placeholder={"YOUR EMAIL"}/>
-                    </div>
-                    <textarea className={s.textarea} name="name" id="name" placeholder={"YOUR MESSAGE"}
-                              rows={6}></textarea>
-                    <button className={s.sendButton}
-                            type={"submit"}>Send message
-                    </button>
-                </form>
+                <ContactForm/>
+                <div className={s.levelingBlock}></div>
             </div>
         </footer>
     );

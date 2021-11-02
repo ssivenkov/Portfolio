@@ -10,7 +10,7 @@ export const Home = () => {
                      src={Avatar}
                      alt=""/>
                 <h1 className={s.firstLine}>Hi, I'm Sergei Sivenkov</h1>
-                <h2 className={s.secondLine}>Front-End Developer</h2>
+                <h2 className={s.secondLine}>Frontend Developer</h2>
             </section>
         </div>
     )

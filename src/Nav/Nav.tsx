@@ -5,7 +5,7 @@ export const Nav = () => {
     return (
         <div className={s.generalContainer}>
             <nav className={s.contentContainer}>
-                <div className={`${s.itemContainer} ${s.itemContainerActive}`}>
+                <div className={s.itemContainer}>
                     <span className={s.itemText}>Home</span>
                 </div>
                 <div className={s.itemContainer}>

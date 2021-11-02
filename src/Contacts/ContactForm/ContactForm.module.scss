@@ -1,0 +1,167 @@
+@import '/src/App';
+
+.formContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 60%;
+}
+
+.formContainerHidden {
+    display: none;
+}
+
+.inputContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.input {
+    color: var(--text);
+    font-size: 18px;
+    font-family: "Lato", sans-serif;
+    width: 100%;
+    padding: 11px 20px;
+    border-radius: 30px;
+    background-color: var(--background_light);
+    transition: .3s;
+    border: 2px solid transparent;
+
+    &:focus {
+        border: 2px solid var(--primary);
+    }
+
+    &Left {
+        margin-right: 15px;
+    }
+
+    &Right {
+        margin-left: 15px;
+    }
+}
+
+.textarea {
+    color: var(--text);
+    font-size: 18px;
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    background-color: var(--background_light);
+    transition: .3s;
+    border: 2px solid transparent;
+    resize: none;
+
+    &:focus {
+        border: 2px solid var(--primary);
+    }
+}
+
+.sendButton {
+    color: var(--text);
+    font-size: 25px;
+    font-weight: 600;
+    font-family: "Hind Siliguri", sans-serif;
+    line-height: 1.1;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: var(--background_dark);
+    border: 2px solid var(--primary);
+    @include no-select;
+}
+
+.errorContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.errorText {
+    position: absolute;
+    bottom: -55px;
+    color: var(--text);
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Hind Siliguri", sans-serif;
+    line-height: 1.1;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.afterFormText {
+    color: var(--text);
+    font-size: 35px;
+    font-weight: 600;
+    font-family: "Hind Siliguri", sans-serif;
+    line-height: 1.1;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.miscContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%; // 100
+}
+
+.formSubmittedText {
+    color: var(--text);
+    font-size: 35px;
+    font-weight: 600;
+    font-family: "Hind Siliguri", sans-serif;
+    line-height: 1.1;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+@media (pointer:coarse) {
+    .sendButton:active {
+        border: 2px solid var(--primary_light);
+        box-shadow: 0 0 13px 1px var(--primary);
+        text-shadow: 0 0 15px var(--primary), 0 0 5px var(--primary);
+    }
+
+    .errorText {
+        @include adaptive-value("padding-bottom", 900, 15, 10, px, 1);
+        @include adaptive-value("padding-top", 900, 15, 10, px, 1);
+    }
+}
+@media (pointer:fine) {
+    .sendButton:hover {
+        border: 2px solid var(--primary_light);
+        box-shadow: 0 0 13px 1px var(--primary);
+        text-shadow: 0 0 15px var(--primary), 0 0 5px var(--primary);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .formContainer {
+        max-width: 100%;
+    }
+
+    .inputContainer {
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    .input {
+        &Right {
+            margin-left: 0;
+        }
+        &Left {
+            margin-right: 0;
+        }
+    }
+
+    .miscContainer {
+        width: 100%;
+    }
+}

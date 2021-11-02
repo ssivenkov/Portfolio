@@ -99,6 +99,6 @@
     }
 
     .image {
-        @include adaptive-value("height", 900, 235, 145, px, 1);
+        @include adaptive-value("height", 900, 250, 210, px, 1);
     }
 }

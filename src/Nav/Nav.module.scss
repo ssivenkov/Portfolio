@@ -26,10 +26,6 @@
     padding-left: 30px;
     padding-right: 30px;
     cursor: pointer;
-    border-bottom: 3px solid transparent;
-    &Active {
-        border-bottom: 3px solid var(--primary);
-    }
 }
 @media (pointer:coarse) {
     .itemContainer:active {
@@ -57,5 +53,11 @@
     }
     .contentContainer {
         @include adaptive-value("height", 800, 80, 50, px, 1);
+    }
+}
+
+@media (pointer:coarse) {
+    .generalContainer {
+        bottom: 0;
     }
 }
