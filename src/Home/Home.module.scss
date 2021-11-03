@@ -34,8 +34,8 @@
 .photo {
     width: 13vw;
     height: 13vw;
-    min-width: 170px;
-    min-height: 170px;
+    min-width: 200px;
+    min-height: 200px;
     max-width: 15vw;
     max-height: 15vw;
     object-fit: cover;
@@ -69,6 +69,34 @@
     z-index: 20;
 }
 
+.downloadButton {
+    font-size: 24px;
+    font-family: "Hind Siliguri", sans-serif;
+    line-height: 1.1;
+    text-align: center;
+    color: var(--text);
+    text-shadow: 0 1px 3px #000;
+    background-color: var(--primary);
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin-top: 7vh;
+    z-index: 20;
+    &:hover {
+        box-shadow: 0 0 8px 4px var(--primary_light);
+    }
+}
+
+@media screen and (pointer:coarse) {
+    .downloadButton {
+        &:hover {
+            box-shadow: none;
+        }
+        &:active {
+            box-shadow: 0 0 8px 4px var(--primary_light);
+        }
+    }
+}
+
 @media screen and (max-width: 800px) {
     .firstLine {
         @include adaptive-value("font-size", 800, 56, 25, px, 1);
@@ -77,5 +105,10 @@
     .secondLine {
         @include adaptive-value("font-size", 800, 24, 15, px, 1);
         @include adaptive-value("margin-top", 800, 12, 6, px, 1);
+    }
+
+    .downloadButton {
+        font-size: 20px;
+        padding: 8px 14px;
     }
 }

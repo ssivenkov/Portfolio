@@ -29,12 +29,15 @@
 }
 @media (pointer:coarse) {
     .itemContainer:active {
-        background-color: var(--background_dark);
+        background-color: var(--primary_medium);
     }
 }
 @media (pointer:fine) {
     .itemContainer:hover {
-        background-color: var(--background_dark);
+        background-color: var(--primary_medium);
+    }
+    .itemContainer:active {
+        background-color: var(--primary);
     }
 }
 

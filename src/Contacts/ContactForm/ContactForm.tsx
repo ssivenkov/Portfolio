@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import s from "./ContactForm.module.scss"
 import { Formik } from "formik";
 import { Preloader } from "../../commonComponents/Preloader/Preloader";
@@ -12,9 +12,18 @@ export const ContactForm = () => {
     const [currentError, setCurrentError] = useState<string>("");
     const [preloader, setPreloader] = useState<boolean>(false);
     const [formHasBeenSubmitted, setFormHasBeenSubmitted] = useState<boolean>(false);
+    const [errorSendForm, setErrorSendForm] = useState<boolean>(false);
+
     const clearCurrentError = () => {
         setCurrentError("");
     }
+
+    useEffect(() => {
+        if (preloader) {
+            document.getElementById("preloader")!.classList.remove(s.hidden);
+            // selected to work with id because ref works slower
+        }
+    }, [preloader]);
 
     return <Formik
         initialValues={{email: "", text: ""}}
@@ -57,11 +66,16 @@ export const ContactForm = () => {
                 body: formData,
             }).then(res => res.json())
                 .then(res => {
-                    console.log("Form send successfully");
-                    setFormHasBeenSubmitted(true);
                     setPreloader(false);
+                    document.getElementById("preloader")!.classList.add(s.hidden);
+                    setFormHasBeenSubmitted(true);
+                    console.log("Form send successfully");
                 })
                 .catch(error => {
+                    setFormHasBeenSubmitted(true);
+                    setPreloader(false);
+                    document.getElementById("preloader")!.classList.add(s.hidden);
+                    setErrorSendForm(true);
                     console.log("Error sending form data");
                 })
         }
@@ -74,12 +88,12 @@ export const ContactForm = () => {
             isSubmitting,
         }) => {
             return <>
-                {preloader && <div className={s.miscContainer}>
+                <div id={"preloader"} className={`${s.miscContainer} ${s.hidden}`}>
                     <Preloader/>
-                </div>}
+                </div>
 
                 {!formHasBeenSubmitted &&
-                <div className={`${s.formContainer} ${preloader ? s.formContainerHidden : ""}`}>
+                <div className={`${s.wrapperContainer} ${preloader ? s.hidden : ""}`}>
                     <form onSubmit={handleSubmit}
                           className={s.formContainer}>
                         <div className={s.inputContainer}>
@@ -111,7 +125,7 @@ export const ContactForm = () => {
                             </button>
 
                             {currentError.length >= 1 &&
-                            <div className={s.miscContainer}>
+                            <div className={s.errorContainer}>
                                 <span className={s.errorText}>{currentError}</span>
                             </div>
                             }
@@ -120,10 +134,18 @@ export const ContactForm = () => {
                 </div>
                 }
 
-                {formHasBeenSubmitted &&
+                {formHasBeenSubmitted && !errorSendForm &&
                 <div className={s.miscContainer}>
                     <span className={s.formSubmittedText}>
                         Thank you, the form has been submitted, await a response
+                    </span>
+                </div>
+                }
+
+                {errorSendForm &&
+                <div className={s.miscContainer}>
+                    <span className={s.formSubmittedText}>
+                        Sorry, error internet connection. Please reload this page and try again
                     </span>
                 </div>
                 }
