@@ -11,7 +11,7 @@ export const Home = () => {
                      alt=""/>
                 <h1 className={s.firstLine}>Hi, I'm Sergei Sivenkov</h1>
                 <h2 className={s.secondLine}>Frontend Developer</h2>
-                <a href="/portfolio/static/media/avatar.a8f483df.jpg"
+                <a href="/Portfolio/static/media/avatar.a8f483df.jpg"
                    download={"avatar.jpg"}
                    className={s.downloadButton}>Download CV</a>
             </section>
