@@ -86,6 +86,10 @@
     }
 }
 
+.marginBlock {
+    margin: 55px 0;
+}
+
 @media screen and (pointer:coarse) {
     .downloadButton {
         &:hover {
