@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.866fd2df.chunk.css",
-    "main.js": "/Portfolio/static/js/main.6d16758e.chunk.js",
-    "main.js.map": "/Portfolio/static/js/main.6d16758e.chunk.js.map",
-    "runtime-main.js": "/Portfolio/static/js/runtime-main.da45361b.js",
-    "runtime-main.js.map": "/Portfolio/static/js/runtime-main.da45361b.js.map",
-    "static/js/2.84898882.chunk.js": "/Portfolio/static/js/2.84898882.chunk.js",
-    "static/js/2.84898882.chunk.js.map": "/Portfolio/static/js/2.84898882.chunk.js.map",
-    "static/js/3.ae2c7ba6.chunk.js": "/Portfolio/static/js/3.ae2c7ba6.chunk.js",
-    "static/js/3.ae2c7ba6.chunk.js.map": "/Portfolio/static/js/3.ae2c7ba6.chunk.js.map",
+    "main.css": "/Portfolio/static/css/main.cfd730cb.chunk.css",
+    "main.js": "/Portfolio/static/js/main.c9706a81.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.c9706a81.chunk.js.map",
+    "runtime-main.js": "/Portfolio/static/js/runtime-main.30efabf1.js",
+    "runtime-main.js.map": "/Portfolio/static/js/runtime-main.30efabf1.js.map",
+    "static/js/2.a5808ae9.chunk.js": "/Portfolio/static/js/2.a5808ae9.chunk.js",
+    "static/js/2.a5808ae9.chunk.js.map": "/Portfolio/static/js/2.a5808ae9.chunk.js.map",
+    "static/js/3.8c2d3357.chunk.js": "/Portfolio/static/js/3.8c2d3357.chunk.js",
+    "static/js/3.8c2d3357.chunk.js.map": "/Portfolio/static/js/3.8c2d3357.chunk.js.map",
     "index.html": "/Portfolio/index.html",
-    "static/css/main.866fd2df.chunk.css.map": "/Portfolio/static/css/main.866fd2df.chunk.css.map",
-    "static/js/2.84898882.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.84898882.chunk.js.LICENSE.txt",
+    "static/css/main.cfd730cb.chunk.css.map": "/Portfolio/static/css/main.cfd730cb.chunk.css.map",
+    "static/js/2.a5808ae9.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.a5808ae9.chunk.js.LICENSE.txt",
     "static/media/CSS.579efed0.svg": "/Portfolio/static/media/CSS.579efed0.svg",
     "static/media/Git.78f741a6.svg": "/Portfolio/static/media/Git.78f741a6.svg",
     "static/media/HTML.04f84acb.svg": "/Portfolio/static/media/HTML.04f84acb.svg",
@@ -29,9 +29,9 @@
     "static/media/veltry.f084d81d.jpg": "/Portfolio/static/media/veltry.f084d81d.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.da45361b.js",
-    "static/js/2.84898882.chunk.js",
-    "static/css/main.866fd2df.chunk.css",
-    "static/js/main.6d16758e.chunk.js"
+    "static/js/runtime-main.30efabf1.js",
+    "static/js/2.a5808ae9.chunk.js",
+    "static/css/main.cfd730cb.chunk.css",
+    "static/js/main.c9706a81.chunk.js"
   ]
 }
