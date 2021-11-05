@@ -9,7 +9,7 @@ import Temp from "../assets/images/Projects/temp.png"
 
 export const Projects = () => {
     return (
-        <div className={s.generalContainer}>
+        <div id={"projects"} className={s.generalContainer}>
             <section className={s.contentContainer}>
                 <Title title={"Projects"}/>
                 <div className={s.projectsContainer}>

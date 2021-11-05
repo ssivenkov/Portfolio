@@ -4,7 +4,7 @@ import Avatar from "../assets/images/avatar.jpg";
 
 export const Home = () => {
     return (
-        <div className={s.generalContainer}>
+        <div id={"home"} className={s.generalContainer}>
             <section className={s.contentContainer}>
                 <img className={s.photo}
                      src={Avatar}

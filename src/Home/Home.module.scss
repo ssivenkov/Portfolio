@@ -87,10 +87,14 @@
 }
 
 .marginBlock {
-    margin: 55px 0;
+    margin: 0;
 }
 
 @media screen and (pointer:coarse) {
+    .marginBlock {
+        margin: 55px 0;
+    }
+
     .downloadButton {
         &:hover {
             box-shadow: none;
@@ -114,5 +118,12 @@
     .downloadButton {
         font-size: 20px;
         padding: 8px 14px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .photo {
+        @include adaptive-value("min-width", 360, 200, 180, px, 1);
+        @include adaptive-value("min-height", 360, 200, 180, px, 1);
     }
 }

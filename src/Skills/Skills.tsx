@@ -14,7 +14,7 @@ import Jest from '../assets/images/Skills/Jest.svg'
 
 export const Skills = () => {
     return (
-        <div className={s.generalContainer}>
+        <div id={"skills"} className={s.generalContainer}>
             <section className={s.contentContainer}>
                 <Title title={"Skills"}/>
                 <div className={s.skillsContainer}>

@@ -6,7 +6,7 @@ import { ContactForm } from "./ContactForm/ContactForm";
 
 export const Contacts = () => {
     return (
-        <footer className={s.generalContainer}>
+        <footer id={"contacts"} className={s.generalContainer}>
             <Title title={"Contacts"}/>
             <div className={s.contentContainer}>
                 <div className={s.linksContainer}>

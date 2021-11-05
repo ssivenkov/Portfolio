@@ -8,6 +8,7 @@
     width: 100%;
     z-index: 50;
     background-color: var(--background);
+    bottom: 0;
 }
 
 .contentContainer {
@@ -56,11 +57,5 @@
     }
     .contentContainer {
         @include adaptive-value("height", 800, 80, 50, px, 1);
-    }
-}
-
-@media (pointer:coarse) {
-    .generalContainer {
-        bottom: 0;
     }
 }
