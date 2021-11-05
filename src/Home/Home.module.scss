@@ -4,12 +4,10 @@
     display: flex;
     justify-content: center;
     position: relative;
-    background-color: var(--background);
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("../assets/images/bg.jpg");
     &:after {
         position: absolute;
         background: rgba(0, 0, 0, 0.4);
