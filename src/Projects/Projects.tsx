@@ -5,6 +5,7 @@ import { Title } from "../commonComponents/Title/Title";
 import Veltry from "../assets/images/Projects/veltry.jpg";
 import Social_network from "../assets/images/Projects/Social network.png"
 import Todolist from "../assets/images/Projects/Todolist.png"
+import Surface1 from "../assets/images/Projects/Surface1.jpg"
 import Temp from "../assets/images/Projects/temp.png"
 
 export const Projects = () => {
@@ -14,13 +15,13 @@ export const Projects = () => {
                 <Title title={"Projects"}/>
                 <div className={s.projectsContainer}>
                     <Project title={"Social network"}
-                             description={"SPA for social actions - messaging and blogging."}
+                             description={"SPA for social actions - messaging and blogging. Implemented: login page with validation, logout button, profile page with the ability to view the information of the selected user, add a new post and view published posts, message page with the ability to send a message with validation, users page with the ability to view the list of users using pagination, subscribe and unsubscribe to any user, view the user profile."}
                              technologies={"SCSS, JavaScript, TypeScript, React, Redux, Redux-form, Axios"}
                              imageLink={Social_network}
                              link={"https://ssivenkov.github.io/Social_network"}
                     />
                     <Project title={"TodoList"}
-                             description={"SPA for managing to-do lists and their items."}
+                             description={"SPA for managing to-do lists and their items. Implemented: add todolist / task, remove todolist / task, rename todolist / task, marking the completed task, displaying all / active / confirmed tasks in todolist."}
                              technologies={"SCSS, JavaScript, TypeScript, React, Redux"}
                              imageLink={Todolist}
                              link={"https://ssivenkov.github.io/TodoList"}
@@ -30,6 +31,12 @@ export const Projects = () => {
                              technologies={"HTML, SCSS, Gulp, JavaScript, PHP, SQL"}
                              imageLink={Veltry}
                              link={"https://veltry.site"}
+                    />
+                    <Project title={"Surface1"}
+                             description={"Landing page on sports topics. Implemented: desktop first method, responsive design."}
+                             technologies={"HTML, CSS"}
+                             imageLink={Surface1}
+                             link={"https://surfaceone.site"}
                     />
                 </div>
             </section>
