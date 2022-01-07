@@ -7,6 +7,7 @@ import Surface1 from "../assets/images/Projects/Surface1.jpg"
 import Veltry from "../assets/images/Projects/veltry.jpg";
 import Todolist from "../assets/images/Projects/Todolist.png"
 import Social_network from "../assets/images/Projects/Social network.png"
+import PlayingCards from "../assets/images/Projects/PlayingCards.png"
 
 export const Projects = () => {
     return (
@@ -17,8 +18,8 @@ export const Projects = () => {
                     <Project title={"Playing cards"}
                              description={"SPA for learning by cards. Implemented: login page with validation; register page with validation; reset password page with validation; 404 page; profile page with abilities to: edit your profile information (change avatar and nickname), add a new card pack and edit, search, sort, view, remove and learn your card packs; packs list page with abilities to: search, sort, view and learn any card packs; learn page with abilities to answer a question and evaluate your answer."}
                              technologies={"CSS, JavaScript, TypeScript, React, Redux, Redux-thunk, Axios, ESLint, Prettier"}
-                             imageLink={Temp}
-                             link={"https://webshturman.github.io/PlaingCards"}
+                             imageLink={PlayingCards}
+                             link={"https://ssivenkov.github.io/Playing-cards"}
                     />
                     <Project title={"Social network"}
                              description={"SPA for social actions - messaging and blogging. Implemented: login page with validation, error displaying and captcha; 404 page; profile page with abilities to: view the information of the selected user, edit your profile information, change avatar, add a new post and view your published posts; dialogs page with the ability to send a message; users page and friends page with abilities to: view the list of users using pagination, subscribe and unsubscribe to any user, view any user profile."}
