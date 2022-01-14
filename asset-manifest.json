@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.3afef5ec.chunk.css",
-    "main.js": "/Portfolio/static/js/main.fd7d7006.chunk.js",
-    "main.js.map": "/Portfolio/static/js/main.fd7d7006.chunk.js.map",
+    "main.js": "/Portfolio/static/js/main.653b1ecd.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.653b1ecd.chunk.js.map",
     "runtime-main.js": "/Portfolio/static/js/runtime-main.d36e2017.js",
     "runtime-main.js.map": "/Portfolio/static/js/runtime-main.d36e2017.js.map",
     "static/js/2.9e193e42.chunk.js": "/Portfolio/static/js/2.9e193e42.chunk.js",
@@ -17,7 +17,7 @@
     "static/media/HTML.04f84acb.svg": "/Portfolio/static/media/HTML.04f84acb.svg",
     "static/media/JS.d0cf7cec.svg": "/Portfolio/static/media/JS.d0cf7cec.svg",
     "static/media/Jest.2ad012ab.svg": "/Portfolio/static/media/Jest.2ad012ab.svg",
-    "static/media/PlayingCards.5321a08d.png": "/Portfolio/static/media/PlayingCards.5321a08d.png",
+    "static/media/PlayingCards.09e947dd.png": "/Portfolio/static/media/PlayingCards.09e947dd.png",
     "static/media/React.5381e1ca.svg": "/Portfolio/static/media/React.5381e1ca.svg",
     "static/media/Redux.b42554ad.svg": "/Portfolio/static/media/Redux.b42554ad.svg",
     "static/media/SASS.992e4895.svg": "/Portfolio/static/media/SASS.992e4895.svg",
@@ -34,6 +34,6 @@
     "static/js/runtime-main.d36e2017.js",
     "static/js/2.9e193e42.chunk.js",
     "static/css/main.3afef5ec.chunk.css",
-    "static/js/main.fd7d7006.chunk.js"
+    "static/js/main.653b1ecd.chunk.js"
   ]
 }
