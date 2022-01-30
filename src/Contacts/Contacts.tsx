@@ -19,9 +19,9 @@ export const Contacts = () => {
                     <LinkButton link={"https://github.com/ssivenkov"}
                                 title={"GitHub"}
                                 iconClass={"fa-github"}/>
-                    <LinkButton link={"https://wa.me/375256778073"}
-                                title={"WhatsApp"}
-                                iconClass={"fa-whatsapp"}/>
+                    <LinkButton link={"https://join.skype.com/invite/cdkkYBX1uutB"}
+                                title={"Skype"}
+                                iconClass={"fa-skype"}/>
                 </div>
                 <div className={s.separator}></div>
                 <ContactForm/>
