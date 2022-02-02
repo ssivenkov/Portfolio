@@ -17,7 +17,7 @@ export const Projects = () => {
                 <Title title={"Projects"}/>
                 <div className={s.projectsContainer}>
                     <Project title={"Password generator"}
-                             description={"SPA for generation secure random passwords. Implemented: create random password page with password settings(length, uppercase letters, lowercase letters, numbers, symbols) and copy password button, recommendations page."}
+                             description={"SPA for generation secure random passwords. Implemented: create random password page with password settings(length, uppercase letters, lowercase letters, numbers, symbols) and copy password button, recommendations page, change color theme bar on all pages."}
                              technologies={"JavaScript, TypeScript, React, Redux, SCSS, ESLint, Prettier"}
                              imageLink={PasswordGenerator}
                              link={"https://github.com/ssivenkov/Password-generator"}
@@ -36,7 +36,7 @@ export const Projects = () => {
                     />
                     <Project title={"TodoList"}
                              description={"SPA for managing to-do lists and their items. Implemented: add todolist / task, remove todolist / task, rename todolist / task, marking the completed task, displaying all / active / confirmed tasks in todolist."}
-                             technologies={"JavaScript, TypeScript, React, Redux, SCSS"}
+                             technologies={"JavaScript, TypeScript, React, Redux, Material UI, SCSS"}
                              imageLink={Todolist}
                              link={"https://github.com/ssivenkov/TodoList"}
                     />
