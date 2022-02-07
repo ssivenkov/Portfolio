@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.3afef5ec.chunk.css",
-    "main.js": "/Portfolio/static/js/main.ba770f29.chunk.js",
-    "main.js.map": "/Portfolio/static/js/main.ba770f29.chunk.js.map",
+    "main.js": "/Portfolio/static/js/main.0b062e19.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.0b062e19.chunk.js.map",
     "runtime-main.js": "/Portfolio/static/js/runtime-main.d36e2017.js",
     "runtime-main.js.map": "/Portfolio/static/js/runtime-main.d36e2017.js.map",
     "static/js/2.9e193e42.chunk.js": "/Portfolio/static/js/2.9e193e42.chunk.js",
@@ -25,7 +25,7 @@
     "static/media/Social network.0de197cf.png": "/Portfolio/static/media/Social network.0de197cf.png",
     "static/media/Surface1.529d596e.jpg": "/Portfolio/static/media/Surface1.529d596e.jpg",
     "static/media/TS.21f37087.svg": "/Portfolio/static/media/TS.21f37087.svg",
-    "static/media/Todolist.930adc1b.png": "/Portfolio/static/media/Todolist.930adc1b.png",
+    "static/media/Todolist.b0004513.png": "/Portfolio/static/media/Todolist.b0004513.png",
     "static/media/avatar.dad3719f.jpg": "/Portfolio/static/media/avatar.dad3719f.jpg",
     "static/media/bg.0e16ac18.jpg": "/Portfolio/static/media/bg.0e16ac18.jpg",
     "static/media/preloader.bea28493.svg": "/Portfolio/static/media/preloader.bea28493.svg",
@@ -35,6 +35,6 @@
     "static/js/runtime-main.d36e2017.js",
     "static/js/2.9e193e42.chunk.js",
     "static/css/main.3afef5ec.chunk.css",
-    "static/js/main.ba770f29.chunk.js"
+    "static/js/main.0b062e19.chunk.js"
   ]
 }
