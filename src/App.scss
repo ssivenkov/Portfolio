@@ -59,3 +59,13 @@ $maxWidth: 1920;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     -webkit-tap-highlight-color: transparent;
 }
+
+// SimpleBar
+.simplebar-scrollbar.simplebar-visible:before {
+    opacity: 0.5;
+    background-color: var(--primary_medium);
+}
+
+.simplebar-scrollbar:before {
+    background-color: var(--primary_medium);
+}
