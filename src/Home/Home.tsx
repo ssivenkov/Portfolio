@@ -9,7 +9,7 @@ export const Home = () => {
         <div id={"home"}>
             <Parallax
                 bgImage={BackgroundImage}
-                strength={500}
+                strength={550}
                 bgImageStyle={{width: "100vw", height: "100vh", objectFit: "cover"}}
             >
                 <div className={s.generalContainer}>

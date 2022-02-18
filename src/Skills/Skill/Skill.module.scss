@@ -1,7 +1,7 @@
 @import '/src/App';
 
 .generalContainer {
-    margin: 15px;
+    margin: 22px;
     width: 175px;
     background: linear-gradient(0deg, #777, #ccc, #ccc);
     border-radius: 15px;
@@ -38,7 +38,7 @@
     }
 
     .image {
-        @include adaptive-value("width", 480, 90.5, 83.5, px, 1);
+        @include adaptive-value("width", 480, 90.5, 63.5, px, 1);
         @include adaptive-value("height", 480, 90.5, 63.5, px, 1);
     }
 

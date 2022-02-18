@@ -1,6 +1,6 @@
 import React from "react";
 import "./Null.scss";
-import 'simplebar/dist/simplebar.css';
+import "simplebar/dist/simplebar.css";
 import "./App.scss";
 import { Nav } from "./Nav/Nav";
 import { Home } from "./Home/Home";
@@ -11,15 +11,15 @@ import SimpleBar from "simplebar-react";
 
 function App() {
     return (
-        <SimpleBar style={{ maxHeight: "100vh" }}>
-            <div>
+        <div>
+            {/*<SimpleBar style={{maxHeight: "100vh"}}>*/}
                 <Nav/>
                 <Home/>
                 <Skills/>
                 <Projects/>
                 <Contacts/>
-            </div>
-        </SimpleBar>
+            {/*</SimpleBar>*/}
+        </div>
     )
 }
 

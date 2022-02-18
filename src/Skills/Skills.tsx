@@ -11,6 +11,9 @@ import ReactJS from '../assets/images/Skills/React.svg'
 import ReduxJS from '../assets/images/Skills/Redux.svg'
 import Git from '../assets/images/Skills/Git.svg'
 import Jest from '../assets/images/Skills/Jest.svg'
+import VectorGraphics from '../assets/images/Skills/VectorGraphics.svg'
+import Formik from '../assets/images/Skills/Formik.svg'
+import Postman from '../assets/images/Skills/Postman.svg'
 
 export const Skills = () => {
     return (
@@ -36,6 +39,12 @@ export const Skills = () => {
                            imageLink={Jest}/>
                     <Skill title={"Git"}
                            imageLink={Git}/>
+                    <Skill title={"Vector graphics"}
+                           imageLink={VectorGraphics}/>
+                    <Skill title={"Formik"}
+                           imageLink={Formik}/>
+                    <Skill title={"Postman"}
+                           imageLink={Postman}/>
                 </div>
             </section>
         </div>
