@@ -1,15 +1,17 @@
-import React from "react";
-import s from "./LinkButton.module.scss"
+import React from 'react';
+import styles from './LinkButton.module.scss';
 
 type LinkButtonType = {
-    link: string
-    title: string
-    iconClass: string
-}
+  link: string;
+  title: string;
+  iconClass: string;
+};
 
 export const LinkButton: React.FC<LinkButtonType> = ({link, title, iconClass}) => {
-    return <a className={s.linkButton} href={link} target="_blank">
-        <span className={s.linkButtonText}>{title}</span>
-        <span className={`${s.linkButtonIcon} ${s.linkButtonIconSmall} fab ${iconClass}`}></span>
+  return (
+    <a className={styles.linkButton} href={link} target='_blank' rel='noreferrer'>
+      <span className={styles.linkButtonText}>{title}</span>
+      <span className={`${styles.linkButtonIcon} ${styles.linkButtonIconSmall} fab ${iconClass}`}></span>
     </a>
-}
+  );
+};

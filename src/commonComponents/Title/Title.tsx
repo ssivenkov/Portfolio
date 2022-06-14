@@ -1,10 +1,10 @@
-import React from "react";
-import s from "./Title.module.scss"
+import React from 'react';
+import styles from './Title.module.scss';
 
 type TitleType = {
-    title: string
-}
+  title: string;
+};
 
 export const Title: React.FC<TitleType> = ({title}) => {
-    return <h3 className={s.title}>{title}</h3>
-}
+  return <h3 className={styles.title}>{title}</h3>;
+};
