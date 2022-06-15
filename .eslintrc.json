@@ -9,7 +9,8 @@
         "plugin:import/errors",
         "plugin:import/warnings",
         "plugin:import/typescript",
-        "plugin:prettier/recommended"
+        "plugin:prettier/recommended",
+        "prettier"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -21,10 +22,12 @@
     },
     "plugins": [
         "react",
-        "prettier",
-        "react-hooks",
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "prettier"
     ],
     "rules": {
+        "no-console": "error",
+        "prettier/prettier": "error",
+        "react/prop-types": "off"
     }
 }

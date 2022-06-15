@@ -6,10 +6,12 @@ export const Nav = () => {
   const scrollToSectionId = (el: MouseEvent<HTMLDivElement>) => {
     const elementIdAsString = el.currentTarget.id.replace(/Ref/gi, '');
     const element = document.getElementById(elementIdAsString);
-    scrollIntoView(element!, {
-      behavior: 'smooth',
-      block: 'start',
-    });
+    if (element) {
+      scrollIntoView(element, {
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
   };
 
   return (

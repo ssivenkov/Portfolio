@@ -15,8 +15,8 @@
 }
 
 .image {
-    width: 90.5px; // float for correct displaying images
-    height: 90.5px;
+    width: 90px;
+    height: 90px;
     @include no-select;
     margin-top: 20px;
 }

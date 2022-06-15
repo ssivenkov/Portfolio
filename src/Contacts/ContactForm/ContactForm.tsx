@@ -21,7 +21,6 @@ export const ContactForm = () => {
   useEffect(() => {
     if (preloader) {
       document.getElementById('preloader')!.classList.remove(styles.hidden);
-      // selected to work with id because ref works slower
     }
   }, [preloader]);
 
@@ -35,26 +34,20 @@ export const ContactForm = () => {
         if (!values.email && !values.text) {
           errorObject.errorText = "Can't send an empty form";
           setCurrentError(errorObject.errorText);
-          console.log("Can't send an empty form");
         } else if (values.email === '') {
           errorObject.errorText = 'Email required';
           setCurrentError(errorObject.errorText);
-          console.log('Email required');
-        } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
+        } else if (!/^[A-Z\d._%+-]+@[A-Z\d.-]+\.[A-Z]{2,}$/i.test(values.email)) {
           errorObject.errorText = 'Invalid email address';
           setCurrentError(errorObject.errorText);
-          console.log('Invalid email address');
         } else if (!values.text || values.text.length === 0) {
           errorObject.errorText = 'Message text required';
           setCurrentError(errorObject.errorText);
-          console.log('Message text required');
         } else if (values.text.length < minLength) {
           errorObject.errorText = `Text must be at least ${minLength} characters`;
           setCurrentError(errorObject.errorText);
-          console.log(`Text must be at least ${minLength} characters`);
-        } else {
-          console.log('Validation check!');
         }
+
         return errorObject;
       }}
       onSubmit={(values) => {
@@ -66,18 +59,16 @@ export const ContactForm = () => {
           body: formData,
         })
           .then((res) => res.json())
-          .then((res) => {
+          .then(() => {
             setPreloader(false);
             document.getElementById('preloader')!.classList.add(styles.hidden);
             setFormHasBeenSubmitted(true);
-            console.log('Form send successfully');
           })
-          .catch((error) => {
+          .catch(() => {
             setFormHasBeenSubmitted(true);
             setPreloader(false);
             document.getElementById('preloader')!.classList.add(styles.hidden);
             setErrorSendForm(true);
-            console.log('Error sending form data');
           });
       }}
     >
