@@ -57,10 +57,20 @@ export const ContactForm = () => {
       }}
       onSubmit={(values) => {
         setPreloader(true);
-        const formData = Object.entries(values).reduce(
-          (acc, [k, v]) => (acc.append(k, v), acc),
-          new FormData(),
-        );
+        const formData = Object.entries(values).reduce<FormData>((acc, [k, v]) => {
+          acc.append(k, v);
+
+          return acc;
+        }, new FormData());
+
+        // console.log('formData -', formData);
+        // console.log('entries -', Object.entries(values));
+        //
+        // //const qwer = Object.entries(values);
+        //
+        // const sss = new FormData();
+        // sss.append('Name', 'Zalupa');
+        // console.log('### sss', sss);
         fetch('https://formspree.io/f/xknkljjq', {
           method: 'POST',
           headers: {Accept: 'application/json'},

@@ -2,7 +2,7 @@ import React from 'react';
 
 import PasswordGenerator from '../assets/images/Projects/PasswordGenerator.png';
 import PlayingCards from '../assets/images/Projects/PlayingCards.png';
-import Social_network from '../assets/images/Projects/Social network.png';
+import SocialNetwork from '../assets/images/Projects/Social network.png';
 import Surface1 from '../assets/images/Projects/Surface1.jpg';
 import Temp from '../assets/images/Projects/temp.png';
 import Todolist from '../assets/images/Projects/Todolist.png';
@@ -57,7 +57,7 @@ export const Projects = () => {
             technologies={
               'JavaScript, TypeScript, React, Redux, Redux-thunk, Redux-form, Axios, Reselect, SCSS'
             }
-            imageLink={Social_network}
+            imageLink={SocialNetwork}
             link={'https://github.com/ssivenkov/Social_network'}
           />
           <Project

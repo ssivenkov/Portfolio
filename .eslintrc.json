@@ -6,6 +6,7 @@
         "node": true
     },
     "extends": [
+        "eslint:recommended",
         "plugin:react/recommended",
         "plugin:react-hooks/recommended",
         "plugin:jsx-a11y/recommended",
@@ -33,23 +34,100 @@
         "prettier"
     ],
     "rules": {
+        // prettier
+        "prettier/prettier": "error",
+        // react
         "react-hooks/rules-of-hooks": "error",
-        "react-hooks/exhaustive-deps": "warn",
+        "react-hooks/exhaustive-deps": "error",
         "react/prop-types": "off",
-        "no-console": "error",
+        // notation
+        "camelcase": "error",
+        "dot-notation": "error",
+        // naming
+        "id-denylist": ["error", "data", "err", "e", "cb", "callback"],
+        "new-cap": "error",
+        "no-label-var": "error",
+        "no-underscore-dangle": "error",
+        "no-useless-rename": "error",
+        // strings
+        "no-multi-str": "error",
+        // prototypes
+        "no-proto": "error",
+        // expressions
+        "no-unused-expressions": "error",
+        // functions
+        "no-empty-function": "error",
+        "require-await": "error",
+        // objects
+        "no-new": "error",
+        // comparing
+        "no-self-compare": "error",
+        "eqeqeq": ["error", "always"],
+        "no-eq-null": "error",
+        "yoda": "error",
+        // assigning
+        "no-multi-assign": "error",
+        "no-param-reassign": "error",
+        // returning
+        "no-return-assign": "error",
+        "no-return-await": "error",
+        // calls
+        "no-console": "warn",
         "no-alert": "error",
         "no-debugger": "error",
         "no-plusplus": "error",
+        "no-eval": "error",
+        // constants
         "no-use-before-define": "error",
-        "no-unused-vars": "error",
+        "no-unused-vars": "warn",
         "no-var": "error",
         "prefer-const": "error",
-        "quotes": ["error", "single", { "avoidEscape": true }],
+        "no-delete-var": "error",
+        // brackets
+        "curly": "error",
+        "no-lone-blocks": "error",
+        "brace-style": "error",
+        // quotes
+        "quotes": ["error", "single", {"avoidEscape": true}],
+        // semicolon
+        "semi": "error",
+        // commas
         "comma-dangle": ["error", "always-multiline"],
-        "semi": ["error", "always"],
-        "indent": ["error", 2],
+        // spacing
+        "array-bracket-spacing": ["error", "never"],
+        "arrow-parens": ["error", "always"],
+        "arrow-spacing": ["error", {"before": true, "after": true}],
+        "computed-property-spacing": ["error", "never"],
+        "key-spacing": ["error", {"beforeColon": false, "afterColon": true}],
+        "keyword-spacing": ["error", {"before": true, "after": true}],
+        "lines-around-comment": ["error", {
+            "beforeBlockComment": true,
+            "beforeLineComment": true,
+            "afterLineComment": false
+        }],
+        "no-multi-spaces": "error",
         "no-multiple-empty-lines": ["error", {"max": 1}],
-        "prettier/prettier": "error",
+        "no-trailing-spaces": "error",
+        "no-whitespace-before-property": "error",
+        "object-curly-spacing": ["error", "never"],
+        "padding-line-between-statements": ["error", {
+            "blankLine": "always",
+            "prev": "*",
+            "next": "return"
+        }],
+        "rest-spread-spacing": ["error", "never"],
+        "semi-spacing": ["error", {"before": false, "after": true}],
+        "space-before-function-paren": ["error", "never"],
+        "space-in-parens": ["error", "never"],
+        "space-unary-ops": "error",
+        "switch-colon-spacing": "error",
+        "template-curly-spacing": "error",
+        "wrap-iife": ["error", "outside"],
+        "yield-star-spacing": ["error", "after"],
+        // switch case
+        "default-case": "error",
+        "default-case-last": "error",
+        // imports
         "no-duplicate-imports": "error",
         "import/no-unresolved": "error",
         "import/order": ["error",
@@ -58,23 +136,10 @@
                 "pathGroupsExcludedImportTypes": [
                     "react"
                 ],
-                "alphabetize": {
-                    "order": "asc",
-                    "caseInsensitive": true
-                },
-                "groups": [
-                    "builtin",
-                    "external",
-                    "parent",
-                    "sibling",
-                    "index"
-                ],
+                "alphabetize": {"order": "asc", "caseInsensitive": true},
+                "groups": ["builtin", "external", "parent", "sibling", "index"],
                 "pathGroups": [
-                    {
-                        "pattern": "react",
-                        "group": "external",
-                        "position": "before"
-                    }
+                    {"pattern": "react", "group": "external", "position": "before"}
                 ]
             }
         ]
