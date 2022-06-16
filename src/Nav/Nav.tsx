@@ -1,9 +1,20 @@
-import React, {MouseEvent} from 'react';
-import styles from './Nav.module.scss';
+import React, {MouseEvent, KeyboardEvent} from 'react';
+
 import scrollIntoView from 'scroll-into-view-if-needed';
 
-export const Nav = () => {
-  const scrollToSectionId = (el: MouseEvent<HTMLDivElement>) => {
+import styles from './Nav.module.scss';
+
+type NavItemType = {
+  id: string;
+  title: string;
+};
+
+const NavItem = (props: NavItemType) => {
+  const {id, title} = props;
+
+  const scrollToSectionId = (
+    el: MouseEvent<HTMLDivElement> | KeyboardEvent<HTMLDivElement>,
+  ) => {
     const elementIdAsString = el.currentTarget.id.replace(/Ref/gi, '');
     const element = document.getElementById(elementIdAsString);
     if (element) {
@@ -15,20 +26,27 @@ export const Nav = () => {
   };
 
   return (
+    <div
+      id={id}
+      onClick={scrollToSectionId}
+      onKeyDown={scrollToSectionId}
+      className={styles.itemContainer}
+      role={'button'}
+      tabIndex={0}
+    >
+      <span className={styles.itemText}>{title}</span>
+    </div>
+  );
+};
+
+export const Nav = () => {
+  return (
     <div className={styles.generalContainer}>
       <nav className={styles.contentContainer}>
-        <div id={'homeRef'} onClick={scrollToSectionId} className={styles.itemContainer}>
-          <span className={styles.itemText}>Home</span>
-        </div>
-        <div id={'skillsRef'} onClick={scrollToSectionId} className={styles.itemContainer}>
-          <span className={styles.itemText}>Skills</span>
-        </div>
-        <div id={'projectsRef'} onClick={scrollToSectionId} className={styles.itemContainer}>
-          <span className={styles.itemText}>Projects</span>
-        </div>
-        <div id={'contactsRef'} onClick={scrollToSectionId} className={styles.itemContainer}>
-          <span className={styles.itemText}>Contacts</span>
-        </div>
+        <NavItem id={'homeRef'} title={'Home'} />
+        <NavItem id={'skillsRef'} title={'Skills'} />
+        <NavItem id={'projectsRef'} title={'Projects'} />
+        <NavItem id={'contactsRef'} title={'Contacts'} />
       </nav>
     </div>
   );

@@ -1,7 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import styles from './ContactForm.module.scss';
+
 import {Formik} from 'formik';
+
 import {Preloader} from '../../commonComponents/Preloader/Preloader';
+
+import styles from './ContactForm.module.scss';
 
 export const ContactForm = () => {
   type errorsType = {
@@ -19,8 +22,10 @@ export const ContactForm = () => {
   };
 
   useEffect(() => {
+    const preloader = document.getElementById('preloader');
+
     if (preloader) {
-      document.getElementById('preloader')!.classList.remove(styles.hidden);
+      preloader.classList.remove(styles.hidden);
     }
   }, [preloader]);
 
@@ -52,7 +57,10 @@ export const ContactForm = () => {
       }}
       onSubmit={(values) => {
         setPreloader(true);
-        const formData = Object.entries(values).reduce((acc, [k, v]) => (acc.append(k, v), acc), new FormData());
+        const formData = Object.entries(values).reduce(
+          (acc, [k, v]) => (acc.append(k, v), acc),
+          new FormData(),
+        );
         fetch('https://formspree.io/f/xknkljjq', {
           method: 'POST',
           headers: {Accept: 'application/json'},
@@ -61,14 +69,22 @@ export const ContactForm = () => {
           .then((res) => res.json())
           .then(() => {
             setPreloader(false);
-            document.getElementById('preloader')!.classList.add(styles.hidden);
-            setFormHasBeenSubmitted(true);
+            const preloader = document.getElementById('preloader');
+
+            if (preloader) {
+              preloader.classList.add(styles.hidden);
+              setFormHasBeenSubmitted(true);
+            }
           })
           .catch(() => {
             setFormHasBeenSubmitted(true);
             setPreloader(false);
-            document.getElementById('preloader')!.classList.add(styles.hidden);
-            setErrorSendForm(true);
+            const preloader = document.getElementById('preloader');
+
+            if (preloader) {
+              preloader.classList.add(styles.hidden);
+              setErrorSendForm(true);
+            }
           });
       }}
     >
@@ -80,7 +96,9 @@ export const ContactForm = () => {
             </div>
 
             {!formHasBeenSubmitted && (
-              <div className={`${styles.wrapperContainer} ${preloader ? styles.hidden : ''}`}>
+              <div
+                className={`${styles.wrapperContainer} ${preloader ? styles.hidden : ''}`}
+              >
                 <form onSubmit={handleSubmit} className={styles.formContainer}>
                   <div className={styles.inputContainer}>
                     <input
@@ -106,7 +124,11 @@ export const ContactForm = () => {
                     rows={6}
                   />
                   <div>
-                    <button type='submit' disabled={isSubmitting} className={styles.sendButton}>
+                    <button
+                      type='submit'
+                      disabled={isSubmitting}
+                      className={styles.sendButton}
+                    >
                       Send message
                     </button>
 

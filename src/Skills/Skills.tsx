@@ -1,19 +1,21 @@
 import React from 'react';
-import styles from './Skills.module.scss';
-import {Skill} from './Skill/Skill';
-import {Title} from '../commonComponents/Title/Title';
-import HTML from '../assets/images/Skills/HTML.svg';
+
 import CSS from '../assets/images/Skills/CSS.svg';
-import SASS from '../assets/images/Skills/SASS.svg';
+import Formik from '../assets/images/Skills/Formik.svg';
+import Git from '../assets/images/Skills/Git.svg';
+import HTML from '../assets/images/Skills/HTML.svg';
+import Jest from '../assets/images/Skills/Jest.svg';
 import JS from '../assets/images/Skills/JS.svg';
-import TS from '../assets/images/Skills/TS.svg';
+import Postman from '../assets/images/Skills/Postman.svg';
 import ReactJS from '../assets/images/Skills/React.svg';
 import ReduxJS from '../assets/images/Skills/Redux.svg';
-import Git from '../assets/images/Skills/Git.svg';
-import Jest from '../assets/images/Skills/Jest.svg';
+import SASS from '../assets/images/Skills/SASS.svg';
+import TS from '../assets/images/Skills/TS.svg';
 import VectorGraphics from '../assets/images/Skills/VectorGraphics.svg';
-import Formik from '../assets/images/Skills/Formik.svg';
-import Postman from '../assets/images/Skills/Postman.svg';
+import {Title} from '../commonComponents/Title/Title';
+
+import {Skill} from './Skill/Skill';
+import styles from './Skills.module.scss';
 
 export const Skills = () => {
   return (

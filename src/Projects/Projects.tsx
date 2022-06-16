@@ -1,14 +1,16 @@
 import React from 'react';
-import styles from './Projects.module.scss';
-import {Project} from './Project/Project';
-import {Title} from '../commonComponents/Title/Title';
-import Temp from '../assets/images/Projects/temp.png';
-import Surface1 from '../assets/images/Projects/Surface1.jpg';
-import Veltry from '../assets/images/Projects/veltry.jpg';
-import Todolist from '../assets/images/Projects/Todolist.png';
-import Social_network from '../assets/images/Projects/Social network.png';
-import PlayingCards from '../assets/images/Projects/PlayingCards.png';
+
 import PasswordGenerator from '../assets/images/Projects/PasswordGenerator.png';
+import PlayingCards from '../assets/images/Projects/PlayingCards.png';
+import Social_network from '../assets/images/Projects/Social network.png';
+import Surface1 from '../assets/images/Projects/Surface1.jpg';
+import Temp from '../assets/images/Projects/temp.png';
+import Todolist from '../assets/images/Projects/Todolist.png';
+import Veltry from '../assets/images/Projects/veltry.jpg';
+import {Title} from '../commonComponents/Title/Title';
+
+import {Project} from './Project/Project';
+import styles from './Projects.module.scss';
 
 export const Projects = () => {
   return (
@@ -52,7 +54,9 @@ export const Projects = () => {
             description={
               'SPA for social actions - messaging and blogging. Implemented: login page with validation, error displaying and captcha; 404 page; profile page with abilities to: view the information of the selected user, edit your profile information, change avatar, add a new post and view your published posts; dialogs page with the ability to send a message; users page and friends page with abilities to: view the list of users using pagination, subscribe and unsubscribe to any user, view any user profile.'
             }
-            technologies={'JavaScript, TypeScript, React, Redux, Redux-thunk, Redux-form, Axios, Reselect, SCSS'}
+            technologies={
+              'JavaScript, TypeScript, React, Redux, Redux-thunk, Redux-form, Axios, Reselect, SCSS'
+            }
             imageLink={Social_network}
             link={'https://github.com/ssivenkov/Social_network'}
           />
@@ -76,7 +80,9 @@ export const Projects = () => {
           />
           <Project
             title={'Surface1'}
-            description={'Landing page on sports topics. Implemented: desktop first method, responsive design.'}
+            description={
+              'Landing page on sports topics. Implemented: desktop first method, responsive design.'
+            }
             technologies={'HTML, CSS'}
             imageLink={Surface1}
             link={'https://github.com/ssivenkov/surface1'}

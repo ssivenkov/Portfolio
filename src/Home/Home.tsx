@@ -1,8 +1,11 @@
 import React from 'react';
-import styles from './Home.module.scss';
+
+import {Parallax} from 'react-parallax';
+
 import Avatar from '../assets/images/avatar.jpg';
 import BackgroundImage from '../assets/images/bg.jpg';
-import {Parallax} from 'react-parallax';
+
+import styles from './Home.module.scss';
 
 export const Home = () => {
   return (

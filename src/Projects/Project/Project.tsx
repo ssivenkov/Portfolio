@@ -1,4 +1,5 @@
 import React from 'react';
+
 import styles from './Project.module.scss';
 
 type ProjectPropsType = {
@@ -9,7 +10,13 @@ type ProjectPropsType = {
   link: string;
 };
 
-export const Project: React.FC<ProjectPropsType> = ({title, description, technologies, imageLink, link}) => {
+export const Project: React.FC<ProjectPropsType> = ({
+  title,
+  description,
+  technologies,
+  imageLink,
+  link,
+}) => {
   return (
     <div className={styles.generalContainer}>
       <img className={styles.image} src={imageLink} alt={`${title} project`} />
