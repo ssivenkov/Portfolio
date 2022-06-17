@@ -10,11 +10,11 @@ type LinkButtonType = {
 
 export const LinkButton: React.FC<LinkButtonType> = ({link, title, iconClass}) => {
   return (
-    <a className={styles.linkButton} href={link} target='_blank' rel='noreferrer'>
+    <a className={styles.linkButton} href={link} rel='noreferrer' target='_blank'>
       <span className={styles.linkButtonText}>{title}</span>
       <span
         className={`${styles.linkButtonIcon} ${styles.linkButtonIconSmall} fab ${iconClass}`}
-      ></span>
+      />
     </a>
   );
 };

@@ -8,34 +8,34 @@ import {LinkButton} from './LinkButton/LinkButton';
 
 export const Contacts = () => {
   return (
-    <footer id={'contacts'} className={styles.generalContainer}>
-      <Title title={'Contacts'} />
+    <footer className={styles.generalContainer} id='contacts'>
+      <Title title='Contacts' />
       <div className={styles.contentContainer}>
         <div className={styles.linksContainer}>
           <LinkButton
-            link={'https://www.linkedin.com/in/ssivenkov'}
-            title={'LinkedIn'}
-            iconClass={'fa-linkedin-in'}
+            iconClass='fa-linkedin-in'
+            link='https://www.linkedin.com/in/ssivenkov'
+            title='LinkedIn'
           />
           <LinkButton
-            link={'https://t.me/sergei_sivenkov'}
-            title={'Telegram'}
-            iconClass={'fa-telegram'}
+            iconClass='fa-telegram'
+            link='https://t.me/sergei_sivenkov'
+            title='Telegram'
           />
           <LinkButton
-            link={'https://github.com/ssivenkov'}
-            title={'GitHub'}
-            iconClass={'fa-github'}
+            iconClass='fa-github'
+            link='https://github.com/ssivenkov'
+            title='GitHub'
           />
           <LinkButton
-            link={'https://join.skype.com/invite/cdkkYBX1uutB'}
-            title={'Skype'}
-            iconClass={'fa-skype'}
+            iconClass='fa-skype'
+            link='https://join.skype.com/invite/cdkkYBX1uutB'
+            title='Skype'
           />
         </div>
-        <div className={styles.separator}></div>
+        <div className={styles.separator} />
         <ContactForm />
-        <div className={styles.levelingBlock}></div>
+        <div className={styles.levelingBlock} />
       </div>
     </footer>
   );

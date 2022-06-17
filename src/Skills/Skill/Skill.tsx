@@ -11,7 +11,7 @@ export const Skill: React.FC<SkillPropsType> = ({title, imageLink}) => {
   return (
     <div className={styles.generalContainer}>
       <div className={styles.contentContainer}>
-        <img className={styles.image} src={imageLink} alt='' />
+        <img alt='' className={styles.image} src={imageLink} />
         <h5 className={styles.title}>{title}</h5>
       </div>
     </div>

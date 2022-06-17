@@ -19,22 +19,22 @@ import styles from './Skills.module.scss';
 
 export const Skills = () => {
   return (
-    <div id={'skills'} className={styles.generalContainer}>
+    <div className={styles.generalContainer} id='skills'>
       <section className={styles.contentContainer}>
-        <Title title={'Skills'} />
+        <Title title='Skills' />
         <div className={styles.skillsContainer}>
-          <Skill title={'HTML'} imageLink={HTML} />
-          <Skill title={'CSS'} imageLink={CSS} />
-          <Skill title={'SASS'} imageLink={SASS} />
-          <Skill title={'JavaScript'} imageLink={JS} />
-          <Skill title={'TypeScript'} imageLink={TS} />
-          <Skill title={'React'} imageLink={ReactJS} />
-          <Skill title={'Redux'} imageLink={ReduxJS} />
-          <Skill title={'Jest'} imageLink={Jest} />
-          <Skill title={'Git'} imageLink={Git} />
-          <Skill title={'Vector graphics'} imageLink={VectorGraphics} />
-          <Skill title={'Formik'} imageLink={Formik} />
-          <Skill title={'Postman'} imageLink={Postman} />
+          <Skill imageLink={HTML} title='HTML' />
+          <Skill imageLink={CSS} title='CSS' />
+          <Skill imageLink={SASS} title='SASS' />
+          <Skill imageLink={JS} title='JavaScript' />
+          <Skill imageLink={TS} title='TypeScript' />
+          <Skill imageLink={ReactJS} title='React' />
+          <Skill imageLink={ReduxJS} title='Redux' />
+          <Skill imageLink={Jest} title='Jest' />
+          <Skill imageLink={Git} title='Git' />
+          <Skill imageLink={VectorGraphics} title='Vector graphics' />
+          <Skill imageLink={Formik} title='Formik' />
+          <Skill imageLink={Postman} title='Postman' />
         </div>
       </section>
     </div>

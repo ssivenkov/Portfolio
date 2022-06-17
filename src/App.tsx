@@ -8,7 +8,7 @@ import {Nav} from './Nav/Nav';
 import {Projects} from './Projects/Projects';
 import {Skills} from './Skills/Skills';
 
-function App() {
+const App = () => {
   return (
     <div>
       <Nav />
@@ -18,6 +18,6 @@ function App() {
       <Contacts />
     </div>
   );
-}
+};
 
 export default App;

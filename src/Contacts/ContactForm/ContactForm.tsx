@@ -32,29 +32,6 @@ export const ContactForm = () => {
   return (
     <Formik
       initialValues={{email: '', text: ''}}
-      validateOnChange={false}
-      validateOnBlur={false}
-      validate={(values) => {
-        const errorObject: errorsType = {};
-        if (!values.email && !values.text) {
-          errorObject.errorText = "Can't send an empty form";
-          setCurrentError(errorObject.errorText);
-        } else if (values.email === '') {
-          errorObject.errorText = 'Email required';
-          setCurrentError(errorObject.errorText);
-        } else if (!/^[A-Z\d._%+-]+@[A-Z\d.-]+\.[A-Z]{2,}$/i.test(values.email)) {
-          errorObject.errorText = 'Invalid email address';
-          setCurrentError(errorObject.errorText);
-        } else if (!values.text || values.text.length === 0) {
-          errorObject.errorText = 'Message text required';
-          setCurrentError(errorObject.errorText);
-        } else if (values.text.length < minLength) {
-          errorObject.errorText = `Text must be at least ${minLength} characters`;
-          setCurrentError(errorObject.errorText);
-        }
-
-        return errorObject;
-      }}
       onSubmit={(values) => {
         setPreloader(true);
         const formData = Object.entries(values).reduce<FormData>((acc, [k, v]) => {
@@ -63,14 +40,6 @@ export const ContactForm = () => {
           return acc;
         }, new FormData());
 
-        // console.log('formData -', formData);
-        // console.log('entries -', Object.entries(values));
-        //
-        // //const qwer = Object.entries(values);
-        //
-        // const sss = new FormData();
-        // sss.append('Name', 'Zalupa');
-        // console.log('### sss', sss);
         fetch('https://formspree.io/f/xknkljjq', {
           method: 'POST',
           headers: {Accept: 'application/json'},
@@ -97,11 +66,35 @@ export const ContactForm = () => {
             }
           });
       }}
+      validate={(values) => {
+        const errorObject: errorsType = {};
+
+        if (!values.email && !values.text) {
+          errorObject.errorText = "Can't send an empty form";
+          setCurrentError(errorObject.errorText);
+        } else if (values.email === '') {
+          errorObject.errorText = 'Email required';
+          setCurrentError(errorObject.errorText);
+        } else if (!/^[A-Z\d._%+-]+@[A-Z\d.-]+\.[A-Z]{2,}$/i.test(values.email)) {
+          errorObject.errorText = 'Invalid email address';
+          setCurrentError(errorObject.errorText);
+        } else if (!values.text || values.text.length === 0) {
+          errorObject.errorText = 'Message text required';
+          setCurrentError(errorObject.errorText);
+        } else if (values.text.length < minLength) {
+          errorObject.errorText = `Text must be at least ${minLength} characters`;
+          setCurrentError(errorObject.errorText);
+        }
+
+        return errorObject;
+      }}
+      validateOnBlur={false}
+      validateOnChange={false}
     >
       {({values, handleChange, handleSubmit, isSubmitting}) => {
         return (
           <>
-            <div id={'preloader'} className={`${styles.miscContainer} ${styles.hidden}`}>
+            <div className={`${styles.miscContainer} ${styles.hidden}`} id='preloader'>
               <Preloader />
             </div>
 
@@ -109,35 +102,35 @@ export const ContactForm = () => {
               <div
                 className={`${styles.wrapperContainer} ${preloader ? styles.hidden : ''}`}
               >
-                <form onSubmit={handleSubmit} className={styles.formContainer}>
+                <form className={styles.formContainer} onSubmit={handleSubmit}>
                   <div className={styles.inputContainer}>
                     <input
-                      id={'email'}
-                      name={'email'}
-                      onChange={handleChange}
-                      onBlur={clearCurrentError}
-                      onFocus={clearCurrentError}
-                      value={values.email}
-                      placeholder={'YOUR EMAIL'}
                       className={styles.input}
+                      id='email'
+                      name='email'
+                      onBlur={clearCurrentError}
+                      onChange={handleChange}
+                      onFocus={clearCurrentError}
+                      placeholder='YOUR EMAIL'
+                      value={values.email}
                     />
                   </div>
                   <textarea
-                    id={'text'}
-                    name={'text'}
-                    onChange={handleChange}
-                    onBlur={clearCurrentError}
-                    onFocus={clearCurrentError}
-                    value={values.text}
-                    placeholder={'YOUR MESSAGE'}
                     className={styles.textarea}
+                    id='text'
+                    name='text'
+                    onBlur={clearCurrentError}
+                    onChange={handleChange}
+                    onFocus={clearCurrentError}
+                    placeholder='YOUR MESSAGE'
                     rows={6}
+                    value={values.text}
                   />
                   <div>
                     <button
-                      type='submit'
-                      disabled={isSubmitting}
                       className={styles.sendButton}
+                      disabled={isSubmitting}
+                      type='submit'
                     >
                       Send message
                     </button>

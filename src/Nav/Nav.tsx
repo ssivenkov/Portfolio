@@ -17,6 +17,7 @@ const NavItem = (props: NavItemType) => {
   ) => {
     const elementIdAsString = el.currentTarget.id.replace(/Ref/gi, '');
     const element = document.getElementById(elementIdAsString);
+
     if (element) {
       scrollIntoView(element, {
         behavior: 'smooth',
@@ -27,11 +28,11 @@ const NavItem = (props: NavItemType) => {
 
   return (
     <div
+      className={styles.itemContainer}
       id={id}
       onClick={scrollToSectionId}
       onKeyDown={scrollToSectionId}
-      className={styles.itemContainer}
-      role={'button'}
+      role='button'
       tabIndex={0}
     >
       <span className={styles.itemText}>{title}</span>
@@ -43,10 +44,10 @@ export const Nav = () => {
   return (
     <div className={styles.generalContainer}>
       <nav className={styles.contentContainer}>
-        <NavItem id={'homeRef'} title={'Home'} />
-        <NavItem id={'skillsRef'} title={'Skills'} />
-        <NavItem id={'projectsRef'} title={'Projects'} />
-        <NavItem id={'contactsRef'} title={'Contacts'} />
+        <NavItem id='homeRef' title='Home' />
+        <NavItem id='skillsRef' title='Skills' />
+        <NavItem id='projectsRef' title='Projects' />
+        <NavItem id='contactsRef' title='Contacts' />
       </nav>
     </div>
   );

@@ -9,18 +9,18 @@ import styles from './Home.module.scss';
 
 export const Home = () => {
   return (
-    <div id={'home'}>
+    <div id='home'>
       <Parallax
         bgImage={BackgroundImage}
-        strength={550}
         bgImageStyle={{width: '100vw', height: '100vh', objectFit: 'cover'}}
+        strength={550}
       >
         <div className={styles.generalContainer}>
           <section className={styles.contentContainer}>
-            <img className={styles.photo} src={Avatar} alt='' />
+            <img alt='' className={styles.photo} src={Avatar} />
             <h1 className={styles.firstLine}>Hi, I&apos;m Sergei Sivenkov</h1>
             <h2 className={styles.secondLine}>Frontend Developer</h2>
-            <div className={styles.marginBlock}></div>
+            <div className={styles.marginBlock} />
           </section>
         </div>
       </Parallax>

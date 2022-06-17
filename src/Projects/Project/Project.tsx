@@ -19,13 +19,13 @@ export const Project: React.FC<ProjectPropsType> = ({
 }) => {
   return (
     <div className={styles.generalContainer}>
-      <img className={styles.image} src={imageLink} alt={`${title} project`} />
+      <img alt={`${title} project`} className={styles.image} src={imageLink} />
       <div className={styles.descriptionContainer}>
         <h5 className={styles.title}>{title}</h5>
         <span className={styles.descriptionText}>{description}</span>
         <span className={styles.descriptionText}>{`Technologies: ${technologies}`}</span>
       </div>
-      <a href={link} className={styles.buttonTitle} target='_blank' rel='noreferrer'>
+      <a className={styles.buttonTitle} href={link} rel='noreferrer' target='_blank'>
         View project
       </a>
     </div>
