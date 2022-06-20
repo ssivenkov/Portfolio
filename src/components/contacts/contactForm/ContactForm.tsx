@@ -1,16 +1,17 @@
 import React, {useEffect, useState} from 'react';
 
 import {Preloader} from '@components/common/Preloader/Preloader';
-import {errorObjectType} from '@components/contacts/contactForm/types';
+import {onSubmit} from '@components/contacts/contactForm/onSubmit';
+import {validation} from '@components/contacts/contactForm/validation';
 import {Formik} from 'formik';
 
 import styles from './ContactForm.module.scss';
 
 export const ContactForm = () => {
   const [currentError, setCurrentError] = useState<string>('');
-  const [preloader, setPreloader] = useState<boolean>(false);
-  const [formHasBeenSubmitted, setFormHasBeenSubmitted] = useState<boolean>(false);
-  const [errorSendForm, setErrorSendForm] = useState<boolean>(false);
+  const [isPreloaderVisible, setIsPreloaderVisible] = useState<boolean>(false);
+  const [isFormHasBeenSubmitted, setIsFormHasBeenSubmitted] = useState<boolean>(false);
+  const [isErrorSendForm, setIsErrorSendForm] = useState<boolean>(false);
   const minLength = 10;
 
   const clearCurrentError = () => {
@@ -20,70 +21,23 @@ export const ContactForm = () => {
   useEffect(() => {
     const preloader = document.getElementById('preloader');
 
-    if (preloader) {
+    if (preloader && isPreloaderVisible) {
       preloader.classList.remove(styles.hidden);
     }
-  }, [preloader]);
+  }, [isPreloaderVisible]);
 
   return (
     <Formik
       initialValues={{email: '', text: ''}}
-      onSubmit={(values) => {
-        setPreloader(true);
-        const formData = Object.entries(values).reduce<FormData>((acc, [k, v]) => {
-          acc.append(k, v);
-
-          return acc;
-        }, new FormData());
-
-        fetch('https://formspree.io/f/xknkljjq', {
-          method: 'POST',
-          headers: {Accept: 'application/json'},
-          body: formData,
+      onSubmit={(values) =>
+        onSubmit({
+          values,
+          setIsPreloaderVisible,
+          setIsFormHasBeenSubmitted,
+          setIsErrorSendForm,
         })
-          .then((res) => res.json())
-          .then(() => {
-            setPreloader(false);
-            const preloader = document.getElementById('preloader');
-
-            if (preloader) {
-              preloader.classList.add(styles.hidden);
-              setFormHasBeenSubmitted(true);
-            }
-          })
-          .catch(() => {
-            setFormHasBeenSubmitted(true);
-            setPreloader(false);
-            const preloader = document.getElementById('preloader');
-
-            if (preloader) {
-              preloader.classList.add(styles.hidden);
-              setErrorSendForm(true);
-            }
-          });
-      }}
-      validate={(values) => {
-        const errorObject: errorObjectType = {};
-
-        if (!values.email && !values.text) {
-          errorObject.errorText = "Can't send an empty form";
-          setCurrentError(errorObject.errorText);
-        } else if (values.email === '') {
-          errorObject.errorText = 'Email required';
-          setCurrentError(errorObject.errorText);
-        } else if (!/^[A-Z\d._%+-]+@[A-Z\d.-]+\.[A-Z]{2,}$/i.test(values.email)) {
-          errorObject.errorText = 'Invalid email address';
-          setCurrentError(errorObject.errorText);
-        } else if (!values.text || values.text.length === 0) {
-          errorObject.errorText = 'Message text required';
-          setCurrentError(errorObject.errorText);
-        } else if (values.text.length < minLength) {
-          errorObject.errorText = `Text must be at least ${minLength} characters`;
-          setCurrentError(errorObject.errorText);
-        }
-
-        return errorObject;
-      }}
+      }
+      validate={(values) => validation({values, setCurrentError, minLength})}
       validateOnBlur={false}
       validateOnChange={false}
     >
@@ -94,9 +48,11 @@ export const ContactForm = () => {
               <Preloader />
             </div>
 
-            {!formHasBeenSubmitted && (
+            {!isFormHasBeenSubmitted && (
               <div
-                className={`${styles.wrapperContainer} ${preloader ? styles.hidden : ''}`}
+                className={`${styles.wrapperContainer} ${
+                  isPreloaderVisible ? styles.hidden : ''
+                }`}
               >
                 <form className={styles.formContainer} onSubmit={handleSubmit}>
                   <div className={styles.inputContainer}>
@@ -141,7 +97,7 @@ export const ContactForm = () => {
               </div>
             )}
 
-            {formHasBeenSubmitted && !errorSendForm && (
+            {isFormHasBeenSubmitted && !isErrorSendForm && (
               <div className={styles.miscContainer}>
                 <span className={styles.formSubmittedText}>
                   Thank you, the form has been submitted, await a response
@@ -149,7 +105,7 @@ export const ContactForm = () => {
               </div>
             )}
 
-            {errorSendForm && (
+            {isErrorSendForm && (
               <div className={styles.miscContainer}>
                 <span className={styles.formSubmittedText}>
                   Sorry, error internet connection. Please reload this page and try again

@@ -1,18 +1,18 @@
 import React from 'react';
 
 import {
-  NavigationItemPropsType,
-  SectionType,
+  NavigationButtonPropsType,
+  EventHandlerType,
 } from '@components/navigation/navigationItem/types';
 import scrollIntoView from 'scroll-into-view-if-needed';
 
 import styles from './NavigationItem.module.scss';
 
-export const NavigationItem = (props: NavigationItemPropsType) => {
+export const NavigationButton = (props: NavigationButtonPropsType) => {
   const {id, title} = props;
 
-  const scrollToSectionId = (el: SectionType) => {
-    const elementId = el.currentTarget.id.replace(/Ref/gi, '');
+  const scrollToSectionId = (eventHandler: EventHandlerType) => {
+    const elementId = eventHandler.currentTarget.id.replace(/Ref/gi, '');
     const element = document.getElementById(elementId);
 
     if (element) {

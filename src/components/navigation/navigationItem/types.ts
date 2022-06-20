@@ -1,8 +1,8 @@
 import {KeyboardEvent, MouseEvent} from 'react';
 
-export type NavigationItemPropsType = {
+export type NavigationButtonPropsType = {
   id: string;
   title: string;
 };
 
-export type SectionType = MouseEvent<HTMLDivElement> | KeyboardEvent<HTMLDivElement>;
+export type EventHandlerType = MouseEvent<HTMLDivElement> | KeyboardEvent<HTMLDivElement>;

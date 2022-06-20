@@ -77,10 +77,6 @@
         "react/jsx-closing-bracket-location": "error",
         "react/jsx-closing-tag-location": "error",
         "react/jsx-curly-brace-presence": "error",
-        "react/jsx-curly-newline": ["error", {
-            "multiline": "forbid",
-            "singleline": "forbid"
-        }],
         "react/jsx-curly-spacing": ["error", {"when": "never", "children": true}],
         "react/jsx-equals-spacing": ["error", "never"],
         "react/jsx-filename-extension": ["error", {"extensions": [".jsx", ".tsx"]}],
@@ -192,11 +188,6 @@
         "computed-property-spacing": ["error", "never"],
         "key-spacing": ["error", {"beforeColon": false, "afterColon": true}],
         "keyword-spacing": ["error", {"before": true, "after": true}],
-        "lines-around-comment": ["error", {
-            "beforeBlockComment": true,
-            "beforeLineComment": false,
-            "afterLineComment": false
-        }],
         "no-multi-spaces": "error",
         "no-multiple-empty-lines": ["error", {"max": 1}],
         "no-trailing-spaces": "error",

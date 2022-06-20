@@ -9,16 +9,14 @@ import {Navigation} from '@components/navigation/Navigation';
 import {Projects} from '@components/projects/Projects';
 import {Skills} from '@components/skills/Skills';
 
-const App = () => {
-  return (
-    <div>
-      <Navigation />
-      <Home />
-      <Skills />
-      <Projects />
-      <Contacts />
-    </div>
-  );
-};
+const App = () => (
+  <div>
+    <Navigation />
+    <Home />
+    <Skills />
+    <Projects />
+    <Contacts />
+  </div>
+);
 
 export default App;

@@ -1,18 +1,16 @@
 import React from 'react';
 
-import {NavigationItem} from '@components/navigation/navigationItem/NavigationItem';
+import {NavigationButton} from '@components/navigation/navigationItem/NavigationButton';
 
 import styles from './Navigation.module.scss';
 
-export const Navigation = () => {
-  return (
-    <div className={styles.componentWrapper}>
-      <nav className={styles.contentContainer}>
-        <NavigationItem id='homeRef' title='Home' />
-        <NavigationItem id='skillsRef' title='Skills' />
-        <NavigationItem id='projectsRef' title='Projects' />
-        <NavigationItem id='contactsRef' title='Contacts' />
-      </nav>
-    </div>
-  );
-};
+export const Navigation = () => (
+  <div className={styles.componentWrapper}>
+    <nav className={styles.contentContainer}>
+      <NavigationButton id='homeRef' title='Home' />
+      <NavigationButton id='skillsRef' title='Skills' />
+      <NavigationButton id='projectsRef' title='Projects' />
+      <NavigationButton id='contactsRef' title='Contacts' />
+    </nav>
+  </div>
+);
