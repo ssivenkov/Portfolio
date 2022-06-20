@@ -1,6 +1,7 @@
 import React from 'react';
 
 import CSS from '@assets/images/skills/CSS.svg';
+import Firebase from '@assets/images/skills/Firebase.svg';
 import Formik from '@assets/images/skills/Formik.svg';
 import Git from '@assets/images/skills/Git.svg';
 import HTML from '@assets/images/skills/HTML.svg';
@@ -28,11 +29,13 @@ export const Skills = () => (
         <Skill imageLink={JS} title='JavaScript' />
         <Skill imageLink={TS} title='TypeScript' />
         <Skill imageLink={ReactJS} title='React' />
+        <Skill imageLink={ReactJS} title='React Native' />
         <Skill imageLink={ReduxJS} title='Redux' />
-        <Skill imageLink={Jest} title='Jest' />
+        <Skill imageLink={Firebase} title='Firebase' />
+        <Skill imageLink={Formik} title='Formik' />
         <Skill imageLink={Git} title='Git' />
         <Skill imageLink={VectorGraphics} title='Vector graphics' />
-        <Skill imageLink={Formik} title='Formik' />
+        <Skill imageLink={Jest} title='Jest' />
         <Skill imageLink={Postman} title='Postman' />
       </div>
     </section>
