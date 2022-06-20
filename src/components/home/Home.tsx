@@ -1,9 +1,8 @@
 import React from 'react';
 
+import Avatar from '@assets/images/avatar.jpg';
+import BackgroundImage from '@assets/images/bg.jpg';
 import {Parallax} from 'react-parallax';
-
-import Avatar from '../../assets/images/avatar.jpg';
-import BackgroundImage from '../../assets/images/bg.jpg';
 
 import styles from './Home.module.scss';
 

@@ -1,14 +1,12 @@
 import React from 'react';
 
+import {LinkButtonPropsType} from '@components/contacts/linkButton/types';
+
 import styles from './LinkButton.module.scss';
 
-type LinkButtonType = {
-  link: string;
-  title: string;
-  iconClass: string;
-};
+export const LinkButton = (props: LinkButtonPropsType) => {
+  const {link, title, iconClass} = props;
 
-export const LinkButton: React.FC<LinkButtonType> = ({link, title, iconClass}) => {
   return (
     <a className={styles.linkButton} href={link} rel='noreferrer' target='_blank'>
       <span className={styles.linkButtonText}>{title}</span>

@@ -1,23 +1,21 @@
-import React, {KeyboardEvent, MouseEvent} from 'react';
+import React from 'react';
 
 import styles from '@components/navigation/navigationItem/NavigationItem.module.scss';
-import {NavigationItemType} from '@components/navigation/navigationItem/types';
+import {
+  NavigationItemPropsType,
+  ScrollToSectionIdParamsType,
+} from '@components/navigation/navigationItem/types';
 import scrollIntoView from 'scroll-into-view-if-needed';
 
-export const NavigationItem = (props: NavigationItemType) => {
+export const NavigationItem = (props: NavigationItemPropsType) => {
   const {id, title} = props;
 
-  const scrollToSectionId = (
-    el: MouseEvent<HTMLDivElement> | KeyboardEvent<HTMLDivElement>,
-  ) => {
+  const scrollToSectionId = (el: ScrollToSectionIdParamsType) => {
     const elementIdAsString = el.currentTarget.id.replace(/Ref/gi, '');
     const element = document.getElementById(elementIdAsString);
 
     if (element) {
-      scrollIntoView(element, {
-        behavior: 'smooth',
-        block: 'start',
-      });
+      scrollIntoView(element, {behavior: 'smooth', block: 'start'});
     }
   };
 

@@ -1,21 +1,17 @@
 import React, {useEffect, useState} from 'react';
 
+import {Preloader} from '@components/common/Preloader/Preloader';
+import {errorObjectType} from '@components/contacts/contactForm/types';
 import {Formik} from 'formik';
-
-import {Preloader} from '../../common/Preloader/Preloader';
 
 import styles from './ContactForm.module.scss';
 
 export const ContactForm = () => {
-  type errorsType = {
-    errorText?: string;
-  };
-
-  const minLength = 10;
   const [currentError, setCurrentError] = useState<string>('');
   const [preloader, setPreloader] = useState<boolean>(false);
   const [formHasBeenSubmitted, setFormHasBeenSubmitted] = useState<boolean>(false);
   const [errorSendForm, setErrorSendForm] = useState<boolean>(false);
+  const minLength = 10;
 
   const clearCurrentError = () => {
     setCurrentError('');
@@ -67,7 +63,7 @@ export const ContactForm = () => {
           });
       }}
       validate={(values) => {
-        const errorObject: errorsType = {};
+        const errorObject: errorObjectType = {};
 
         if (!values.email && !values.text) {
           errorObject.errorText = "Can't send an empty form";

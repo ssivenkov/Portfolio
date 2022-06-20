@@ -1,13 +1,12 @@
 import React from 'react';
 
+import {SkillPropsType} from '@components/skills/skill/types';
+
 import styles from './Skill.module.scss';
 
-type SkillPropsType = {
-  title: string;
-  imageLink: string;
-};
+export const Skill = (props: SkillPropsType) => {
+  const {title, imageLink} = props;
 
-export const Skill: React.FC<SkillPropsType> = ({title, imageLink}) => {
   return (
     <div className={styles.generalContainer}>
       <div className={styles.contentContainer}>
