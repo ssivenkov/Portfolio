@@ -1,15 +1,15 @@
 import React from 'react';
 
-import PasswordGenerator from '../assets/images/Projects/PasswordGenerator.png';
-import PlayingCards from '../assets/images/Projects/PlayingCards.png';
-import SocialNetwork from '../assets/images/Projects/Social network.png';
-import Surface1 from '../assets/images/Projects/Surface1.jpg';
-import Temp from '../assets/images/Projects/temp.png';
-import Todolist from '../assets/images/Projects/Todolist.png';
-import Veltry from '../assets/images/Projects/veltry.jpg';
-import {Title} from '../commonComponents/Title/Title';
+import PasswordGenerator from '../../assets/images/Projects/PasswordGenerator.png';
+import PlayingCards from '../../assets/images/Projects/PlayingCards.png';
+import SocialNetwork from '../../assets/images/Projects/Social network.png';
+import Surface1 from '../../assets/images/Projects/Surface1.jpg';
+import Temp from '../../assets/images/Projects/temp.png';
+import Todolist from '../../assets/images/Projects/Todolist.png';
+import Veltry from '../../assets/images/Projects/veltry.jpg';
+import {Title} from '../common/Title/Title';
 
-import {Project} from './Project/Project';
+import {Project} from './project/Project';
 import styles from './Projects.module.scss';
 
 export const Projects = () => {

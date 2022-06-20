@@ -17,13 +17,13 @@
         "plugin:@typescript-eslint/recommended",
         "prettier"
     ],
+    "ignorePatterns": ["craco.config.js"],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
+        "ecmaFeatures": {"jsx": true},
         "ecmaVersion": "latest",
-        "sourceType": "module"
+        "sourceType": "module",
+        "project": ["./tsconfig.json"]
     },
     "plugins": [
         "react",
@@ -37,10 +37,14 @@
         // prettier
         "prettier/prettier": "error",
 
+        // typescript
+        "@typescript-eslint/no-var-requires": "off",
+
         // react
         "react/boolean-prop-naming": ["error", {
             "rule": "^(is|has)[A-Z]([A-Za-z0-9]?)+"
         }],
+        "react/button-has-type": "error",
         "react/destructuring-assignment": ["error", "always"],
         "react/display-name": "error",
         "react/function-component-definition": ["error", {
@@ -51,7 +55,7 @@
         "react/no-array-index-key": "error",
         "react/no-arrow-function-lifecycle": "error",
         "react/no-danger": "error",
-        "react/no-multi-comp": "warn",
+        "react/no-multi-comp": "error",
         "react/no-namespace": "error",
         "react/no-this-in-sfc": "error",
         "react/no-unsafe": "error",
@@ -77,10 +81,7 @@
             "multiline": "forbid",
             "singleline": "forbid"
         }],
-        "react/jsx-curly-spacing": ["error", {
-            "when": "never",
-            "children": true
-        }],
+        "react/jsx-curly-spacing": ["error", {"when": "never", "children": true}],
         "react/jsx-equals-spacing": ["error", "never"],
         "react/jsx-filename-extension": ["error", {"extensions": [".jsx", ".tsx"]}],
         "react/jsx-fragments": ["error", "syntax"],
@@ -234,7 +235,7 @@
 
         // imports
         "no-duplicate-imports": "error",
-        "import/no-unresolved": "error",
+        "import/no-unresolved": "off",
         "import/order": ["error",
             {
                 "newlines-between": "always",

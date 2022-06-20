@@ -1,10 +1,10 @@
 import React from 'react';
 
-import {Title} from '../commonComponents/Title/Title';
+import {Title} from '../common/Title/Title';
 
-import {ContactForm} from './ContactForm/ContactForm';
+import {ContactForm} from './contactForm/ContactForm';
 import styles from './Contacts.module.scss';
-import {LinkButton} from './LinkButton/LinkButton';
+import {LinkButton} from './linkButton/LinkButton';
 
 export const Contacts = () => {
   return (

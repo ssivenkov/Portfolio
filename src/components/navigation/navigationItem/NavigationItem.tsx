@@ -1,15 +1,10 @@
-import React, {MouseEvent, KeyboardEvent} from 'react';
+import React, {KeyboardEvent, MouseEvent} from 'react';
 
+import styles from '@components/navigation/navigationItem/NavigationItem.module.scss';
+import {NavigationItemType} from '@components/navigation/navigationItem/types';
 import scrollIntoView from 'scroll-into-view-if-needed';
 
-import styles from './Nav.module.scss';
-
-type NavItemType = {
-  id: string;
-  title: string;
-};
-
-const NavItem = (props: NavItemType) => {
+export const NavigationItem = (props: NavigationItemType) => {
   const {id, title} = props;
 
   const scrollToSectionId = (
@@ -36,19 +31,6 @@ const NavItem = (props: NavItemType) => {
       tabIndex={0}
     >
       <span className={styles.itemText}>{title}</span>
-    </div>
-  );
-};
-
-export const Nav = () => {
-  return (
-    <div className={styles.generalContainer}>
-      <nav className={styles.contentContainer}>
-        <NavItem id='homeRef' title='Home' />
-        <NavItem id='skillsRef' title='Skills' />
-        <NavItem id='projectsRef' title='Projects' />
-        <NavItem id='contactsRef' title='Contacts' />
-      </nav>
     </div>
   );
 };

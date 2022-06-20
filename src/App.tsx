@@ -2,16 +2,17 @@ import React from 'react';
 
 import './Null.scss';
 import './App.scss';
-import {Contacts} from './Contacts/Contacts';
-import {Home} from './Home/Home';
-import {Nav} from './Nav/Nav';
-import {Projects} from './Projects/Projects';
-import {Skills} from './Skills/Skills';
+
+import {Contacts} from '@components/contacts/Contacts';
+import {Home} from '@components/home/Home';
+import {Navigation} from '@components/navigation/Navigation';
+import {Projects} from '@components/projects/Projects';
+import {Skills} from '@components/skills/Skills';
 
 const App = () => {
   return (
     <div>
-      <Nav />
+      <Navigation />
       <Home />
       <Skills />
       <Projects />
