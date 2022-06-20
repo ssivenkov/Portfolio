@@ -4,13 +4,15 @@ import {NavigationItem} from '@components/navigation/navigationItem/NavigationIt
 
 import styles from './Navigation.module.scss';
 
-export const Navigation = () => (
-  <div className={styles.generalContainer}>
-    <nav className={styles.contentContainer}>
-      <NavigationItem id='homeRef' title='Home' />
-      <NavigationItem id='skillsRef' title='Skills' />
-      <NavigationItem id='projectsRef' title='Projects' />
-      <NavigationItem id='contactsRef' title='Contacts' />
-    </nav>
-  </div>
-);
+export const Navigation = () => {
+  return (
+    <div className={styles.componentWrapper}>
+      <nav className={styles.contentContainer}>
+        <NavigationItem id='homeRef' title='Home' />
+        <NavigationItem id='skillsRef' title='Skills' />
+        <NavigationItem id='projectsRef' title='Projects' />
+        <NavigationItem id='contactsRef' title='Contacts' />
+      </nav>
+    </div>
+  );
+};

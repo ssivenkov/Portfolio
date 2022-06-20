@@ -17,26 +17,24 @@ import {Skill} from '@components/skills/skill/Skill';
 
 import styles from './Skills.module.scss';
 
-export const Skills = () => {
-  return (
-    <div className={styles.generalContainer} id='skills'>
-      <section className={styles.contentContainer}>
-        <Title title='Skills' />
-        <div className={styles.skillsContainer}>
-          <Skill imageLink={HTML} title='HTML' />
-          <Skill imageLink={CSS} title='CSS' />
-          <Skill imageLink={SASS} title='SASS' />
-          <Skill imageLink={JS} title='JavaScript' />
-          <Skill imageLink={TS} title='TypeScript' />
-          <Skill imageLink={ReactJS} title='React' />
-          <Skill imageLink={ReduxJS} title='Redux' />
-          <Skill imageLink={Jest} title='Jest' />
-          <Skill imageLink={Git} title='Git' />
-          <Skill imageLink={VectorGraphics} title='Vector graphics' />
-          <Skill imageLink={Formik} title='Formik' />
-          <Skill imageLink={Postman} title='Postman' />
-        </div>
-      </section>
-    </div>
-  );
-};
+export const Skills = () => (
+  <div className={styles.componentWrapper} id='skills'>
+    <section className={styles.contentContainer}>
+      <Title title='Skills' />
+      <div className={styles.skillsContainer}>
+        <Skill imageLink={HTML} title='HTML' />
+        <Skill imageLink={CSS} title='CSS' />
+        <Skill imageLink={SASS} title='SASS' />
+        <Skill imageLink={JS} title='JavaScript' />
+        <Skill imageLink={TS} title='TypeScript' />
+        <Skill imageLink={ReactJS} title='React' />
+        <Skill imageLink={ReduxJS} title='Redux' />
+        <Skill imageLink={Jest} title='Jest' />
+        <Skill imageLink={Git} title='Git' />
+        <Skill imageLink={VectorGraphics} title='Vector graphics' />
+        <Skill imageLink={Formik} title='Formik' />
+        <Skill imageLink={Postman} title='Postman' />
+      </div>
+    </section>
+  </div>
+);

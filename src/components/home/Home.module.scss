@@ -1,6 +1,6 @@
 @import '/src/App';
 
-.generalContainer {
+.homeWrapper {
     display: flex;
     justify-content: center;
     position: relative;
@@ -84,12 +84,12 @@
     }
 }
 
-.marginBlock {
+.mobileMarginBlock {
     margin: 0;
 }
 
 @media screen and (pointer:coarse) {
-    .marginBlock {
+    .mobileMarginBlock {
         margin: 55px 0;
     }
 

@@ -10,7 +10,7 @@ export const Skill = (props: SkillPropsType) => {
   return (
     <div className={styles.generalContainer}>
       <div className={styles.contentContainer}>
-        <img alt='' className={styles.image} src={imageLink} />
+        <img alt={`${title} icon`} className={styles.image} src={imageLink} />
         <h5 className={styles.title}>{title}</h5>
       </div>
     </div>

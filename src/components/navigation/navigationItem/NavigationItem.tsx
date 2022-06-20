@@ -1,18 +1,19 @@
 import React from 'react';
 
-import styles from '@components/navigation/navigationItem/NavigationItem.module.scss';
 import {
   NavigationItemPropsType,
-  ScrollToSectionIdParamsType,
+  SectionType,
 } from '@components/navigation/navigationItem/types';
 import scrollIntoView from 'scroll-into-view-if-needed';
+
+import styles from './NavigationItem.module.scss';
 
 export const NavigationItem = (props: NavigationItemPropsType) => {
   const {id, title} = props;
 
-  const scrollToSectionId = (el: ScrollToSectionIdParamsType) => {
-    const elementIdAsString = el.currentTarget.id.replace(/Ref/gi, '');
-    const element = document.getElementById(elementIdAsString);
+  const scrollToSectionId = (el: SectionType) => {
+    const elementId = el.currentTarget.id.replace(/Ref/gi, '');
+    const element = document.getElementById(elementId);
 
     if (element) {
       scrollIntoView(element, {behavior: 'smooth', block: 'start'});

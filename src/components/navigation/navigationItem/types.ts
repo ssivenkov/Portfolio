@@ -5,6 +5,4 @@ export type NavigationItemPropsType = {
   title: string;
 };
 
-export type ScrollToSectionIdParamsType =
-  | MouseEvent<HTMLDivElement>
-  | KeyboardEvent<HTMLDivElement>;
+export type SectionType = MouseEvent<HTMLDivElement> | KeyboardEvent<HTMLDivElement>;

@@ -194,7 +194,7 @@
         "keyword-spacing": ["error", {"before": true, "after": true}],
         "lines-around-comment": ["error", {
             "beforeBlockComment": true,
-            "beforeLineComment": true,
+            "beforeLineComment": false,
             "afterLineComment": false
         }],
         "no-multi-spaces": "error",
