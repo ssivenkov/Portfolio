@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {NavigationButton} from '@components/navigation/navigationItem/NavigationButton';
+import { NavigationButton } from '@components/navigation/navigationItem/NavigationButton';
 
 import styles from './Navigation.module.scss';
 

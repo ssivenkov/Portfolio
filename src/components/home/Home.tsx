@@ -2,7 +2,7 @@ import React from 'react';
 
 import Avatar from '@assets/images/avatar.jpg';
 import BackgroundImage from '@assets/images/bg.jpg';
-import {Parallax} from 'react-parallax';
+import { Parallax } from 'react-parallax';
 
 import styles from './Home.module.scss';
 
@@ -10,7 +10,7 @@ export const Home = () => (
   <div id='home'>
     <Parallax
       bgImage={BackgroundImage}
-      bgImageStyle={{width: '100vw', height: '100vh', objectFit: 'cover'}}
+      bgImageStyle={{ width: '100vw', height: '100vh', objectFit: 'cover' }}
       strength={550}
     >
       <div className={styles.homeWrapper}>

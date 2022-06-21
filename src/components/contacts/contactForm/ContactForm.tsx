@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 
-import {Preloader} from '@components/common/Preloader/Preloader';
-import {onSubmit} from '@components/contacts/contactForm/onSubmit';
-import {validation} from '@components/contacts/contactForm/validation';
-import {Formik} from 'formik';
+import { Preloader } from '@components/common/Preloader/Preloader';
+import { onSubmit } from '@components/contacts/contactForm/onSubmit';
+import { validation } from '@components/contacts/contactForm/validation';
+import { Formik } from 'formik';
 
 import styles from './ContactForm.module.scss';
 
@@ -28,7 +28,7 @@ export const ContactForm = () => {
 
   return (
     <Formik
-      initialValues={{email: '', text: ''}}
+      initialValues={{ email: '', text: '' }}
       onSubmit={(values) =>
         onSubmit({
           values,
@@ -37,11 +37,11 @@ export const ContactForm = () => {
           setIsErrorSendForm,
         })
       }
-      validate={(values) => validation({values, setCurrentError, minLength})}
+      validate={(values) => validation({ values, setCurrentError, minLength })}
       validateOnBlur={false}
       validateOnChange={false}
     >
-      {({values, handleChange, handleSubmit, isSubmitting}) => {
+      {({ values, handleChange, handleSubmit, isSubmitting }) => {
         return (
           <>
             <div className={`${styles.miscContainer} ${styles.hidden}`} id='preloader'>

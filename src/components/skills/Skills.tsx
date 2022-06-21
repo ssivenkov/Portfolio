@@ -13,8 +13,8 @@ import ReduxJS from '@assets/images/skills/Redux.svg';
 import SASS from '@assets/images/skills/SASS.svg';
 import TS from '@assets/images/skills/TS.svg';
 import VectorGraphics from '@assets/images/skills/VectorGraphics.svg';
-import {Title} from '@components/common/Title/Title';
-import {Skill} from '@components/skills/skill/Skill';
+import { Title } from '@components/common/Title/Title';
+import { Skill } from '@components/skills/skill/Skill';
 
 import styles from './Skills.module.scss';
 

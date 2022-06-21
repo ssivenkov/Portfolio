@@ -1,11 +1,11 @@
 import React from 'react';
 
-import {SkillPropsType} from '@components/skills/skill/types';
+import { SkillPropsType } from '@components/skills/skill/types';
 
 import styles from './Skill.module.scss';
 
 export const Skill = (props: SkillPropsType) => {
-  const {title, imageLink} = props;
+  const { title, imageLink } = props;
 
   return (
     <div className={styles.generalContainer}>

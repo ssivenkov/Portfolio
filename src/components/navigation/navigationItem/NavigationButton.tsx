@@ -9,14 +9,14 @@ import scrollIntoView from 'scroll-into-view-if-needed';
 import styles from './NavigationItem.module.scss';
 
 export const NavigationButton = (props: NavigationButtonPropsType) => {
-  const {id, title} = props;
+  const { id, title } = props;
 
   const scrollToSectionId = (eventHandler: EventHandlerType) => {
     const elementId = eventHandler.currentTarget.id.replace(/Ref/gi, '');
     const element = document.getElementById(elementId);
 
     if (element) {
-      scrollIntoView(element, {behavior: 'smooth', block: 'start'});
+      scrollIntoView(element, { behavior: 'smooth', block: 'start' });
     }
   };
 

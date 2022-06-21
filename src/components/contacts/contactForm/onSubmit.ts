@@ -1,8 +1,8 @@
 import styles from '@components/contacts/contactForm/ContactForm.module.scss';
-import {OnSubmitParamsType} from '@components/contacts/contactForm/types';
+import { OnSubmitParamsType } from '@components/contacts/contactForm/types';
 
 export const onSubmit = (params: OnSubmitParamsType) => {
-  const {values, setIsPreloaderVisible, setIsFormHasBeenSubmitted, setIsErrorSendForm} =
+  const { values, setIsPreloaderVisible, setIsFormHasBeenSubmitted, setIsErrorSendForm } =
     params;
 
   setIsPreloaderVisible(true);
@@ -15,7 +15,7 @@ export const onSubmit = (params: OnSubmitParamsType) => {
 
   fetch('https://formspree.io/f/xknkljjq', {
     method: 'POST',
-    headers: {Accept: 'application/json'},
+    headers: { Accept: 'application/json' },
     body: formData,
   })
     .then((res) => res.json())

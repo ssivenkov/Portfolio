@@ -1,11 +1,11 @@
 import React from 'react';
 
-import {ProjectPropsType} from '@components/projects/project/types';
+import { ProjectPropsType } from '@components/projects/project/types';
 
 import styles from './Project.module.scss';
 
 export const Project = (props: ProjectPropsType) => {
-  const {title, description, technologies, imageLink, projectLink} = props;
+  const { title, description, technologies, imageLink, projectLink } = props;
 
   return (
     <div className={styles.generalContainer}>

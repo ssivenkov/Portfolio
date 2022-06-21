@@ -4,7 +4,7 @@ import {
 } from '@components/contacts/contactForm/types';
 
 export const validation = (params: ValidationParamsType) => {
-  const {values, setCurrentError, minLength} = params;
+  const { values, setCurrentError, minLength } = params;
 
   const errorObject: errorObjectType = {};
 

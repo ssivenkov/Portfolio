@@ -1,4 +1,4 @@
-import {KeyboardEvent, MouseEvent} from 'react';
+import { KeyboardEvent, MouseEvent } from 'react';
 
 export type NavigationButtonPropsType = {
   id: string;

@@ -1,4 +1,4 @@
-import {SetStateType} from '@src/types/commonTypes';
+import { SetStateType } from '@src/types/commonTypes';
 
 export type errorObjectType = {
   errorText?: string;

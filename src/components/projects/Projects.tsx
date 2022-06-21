@@ -7,9 +7,9 @@ import Surface1 from '@assets/images/projects/Surface1.jpg';
 import Todolist from '@assets/images/projects/Todolist.png';
 import TodolistRN from '@assets/images/projects/ToDoListReactNative.png';
 import Veltry from '@assets/images/projects/Veltry.jpg';
-import {Title} from '@components/common/Title/Title';
-import {Project} from '@components/projects/project/Project';
-//import Temp from '@assets/images/projects/temp.png';
+import { Title } from '@components/common/Title/Title';
+import { Project } from '@components/projects/project/Project';
+// import Temp from '@assets/images/projects/temp.png';
 
 import styles from './Projects.module.scss';
 
