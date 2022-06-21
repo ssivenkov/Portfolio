@@ -2,13 +2,14 @@ import React from 'react';
 
 import PasswordGenerator from '@assets/images/projects/PasswordGenerator.png';
 import PlayingCards from '@assets/images/projects/PlayingCards.png';
-import SocialNetwork from '@assets/images/projects/Social network.png';
+import SocialNetwork from '@assets/images/projects/SocialNetwork.png';
 import Surface1 from '@assets/images/projects/Surface1.jpg';
-import Temp from '@assets/images/projects/temp.png';
 import Todolist from '@assets/images/projects/Todolist.png';
+import TodolistRN from '@assets/images/projects/ToDoListReactNative.png';
 import Veltry from '@assets/images/projects/Veltry.jpg';
 import {Title} from '@components/common/Title/Title';
 import {Project} from '@components/projects/project/Project';
+//import Temp from '@assets/images/projects/temp.png';
 
 import styles from './Projects.module.scss';
 
@@ -19,7 +20,7 @@ export const Projects = () => (
       <div className={styles.projectsContainer}>
         <Project
           description='Mobile task management application for Android and iOS. Implemented: add task or task list, remove task or task list, rename task or task list, marking the completed task, mark task with any color, screens for todo tasks and for done tasks, receiving notifications at a certain date and time for tasks, sign in with Google, internet connection checking, app accent color picker button, delete account button, change app language buttons, user data storage and synchronizing with Firebase Realtime Database, dark theme mode, splash screen.'
-          imageLink={Temp}
+          imageLink={TodolistRN}
           projectLink='https://github.com/ssivenkov/ToDoList-React-Native'
           technologies='JavaScript, TypeScript, React Native, Redux, Redux-Saga, ESLint, Prettier, Firebase, i18next, Font Awesome'
           title='ToDo List'
