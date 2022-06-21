@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.96548979.css",
-    "main.js": "/Portfolio/static/js/main.220486c1.js",
+    "main.css": "/Portfolio/static/css/main.df73fdcd.css",
+    "main.js": "/Portfolio/static/js/main.dddf54b0.js",
+    "static/media/ToDoListReactNative.png": "/Portfolio/static/media/ToDoListReactNative.5e75e8b9bc7d75948d7a.png",
     "static/media/bg.jpg": "/Portfolio/static/media/bg.0e16ac18d2607d0275e6.jpg",
-    "static/media/Social network.png": "/Portfolio/static/media/Social network.0de197cfa9187b3b1fa0.png",
+    "static/media/SocialNetwork.png": "/Portfolio/static/media/SocialNetwork.0de197cfa9187b3b1fa0.png",
     "static/media/Veltry.jpg": "/Portfolio/static/media/Veltry.f084d81d251bae58e6c5.jpg",
     "static/media/PlayingCards.png": "/Portfolio/static/media/PlayingCards.09e947dd5fe7fc5c780e.png",
     "static/media/Surface1.jpg": "/Portfolio/static/media/Surface1.529d596e23860875fc6f.jpg",
@@ -25,11 +26,11 @@
     "static/media/HTML.svg": "/Portfolio/static/media/HTML.2855e8f8e7a754601e485eaa43b11e78.svg",
     "static/media/CSS.svg": "/Portfolio/static/media/CSS.85f361fbb2bd19e3186d37fe7639a21d.svg",
     "index.html": "/Portfolio/index.html",
-    "main.96548979.css.map": "/Portfolio/static/css/main.96548979.css.map",
-    "main.220486c1.js.map": "/Portfolio/static/js/main.220486c1.js.map"
+    "main.df73fdcd.css.map": "/Portfolio/static/css/main.df73fdcd.css.map",
+    "main.dddf54b0.js.map": "/Portfolio/static/js/main.dddf54b0.js.map"
   },
   "entrypoints": [
-    "static/css/main.96548979.css",
-    "static/js/main.220486c1.js"
+    "static/css/main.df73fdcd.css",
+    "static/js/main.dddf54b0.js"
   ]
 }
