@@ -1,7 +1,3 @@
-# Android/IntelliJ
-#
-android/
-build/
 .idea
 
 # Visual Studio Code
