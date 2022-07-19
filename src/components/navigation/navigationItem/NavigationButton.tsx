@@ -1,12 +1,9 @@
 import React from 'react';
 
-import {
-  NavigationButtonPropsType,
-  EventHandlerType,
-} from '@components/navigation/navigationItem/types';
 import scrollIntoView from 'scroll-into-view-if-needed';
 
 import styles from './NavigationItem.module.scss';
+import { NavigationButtonPropsType, EventHandlerType } from './types';
 
 export const NavigationButton = (props: NavigationButtonPropsType) => {
   const { id, title } = props;

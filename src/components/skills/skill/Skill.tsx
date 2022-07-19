@@ -1,8 +1,7 @@
 import React from 'react';
 
-import { SkillPropsType } from '@components/skills/skill/types';
-
 import styles from './Skill.module.scss';
+import { SkillPropsType } from './types';
 
 export const Skill = (props: SkillPropsType) => {
   const { title, imageLink } = props;

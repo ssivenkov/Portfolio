@@ -1,20 +1,20 @@
 import React from 'react';
 
-import CSS from '@assets/images/skills/CSS.svg';
-import Firebase from '@assets/images/skills/Firebase.svg';
-import Formik from '@assets/images/skills/Formik.svg';
-import Git from '@assets/images/skills/Git.svg';
-import HTML from '@assets/images/skills/HTML.svg';
-import Jest from '@assets/images/skills/Jest.svg';
-import JS from '@assets/images/skills/JS.svg';
-import Postman from '@assets/images/skills/Postman.svg';
-import ReactJS from '@assets/images/skills/React.svg';
-import ReduxJS from '@assets/images/skills/Redux.svg';
-import SASS from '@assets/images/skills/SASS.svg';
-import TS from '@assets/images/skills/TS.svg';
-import VectorGraphics from '@assets/images/skills/VectorGraphics.svg';
-import { Title } from '@components/common/Title/Title';
-import { Skill } from '@components/skills/skill/Skill';
+import CSS from 'assets/images/skills/CSS.svg';
+import Firebase from 'assets/images/skills/Firebase.svg';
+import Formik from 'assets/images/skills/Formik.svg';
+import Git from 'assets/images/skills/Git.svg';
+import HTML from 'assets/images/skills/HTML.svg';
+import Jest from 'assets/images/skills/Jest.svg';
+import JS from 'assets/images/skills/JS.svg';
+import Postman from 'assets/images/skills/Postman.svg';
+import ReactJS from 'assets/images/skills/React.svg';
+import ReduxJS from 'assets/images/skills/Redux.svg';
+import SASS from 'assets/images/skills/SASS.svg';
+import TS from 'assets/images/skills/TS.svg';
+import VectorGraphics from 'assets/images/skills/VectorGraphics.svg';
+import { Title } from 'components/common/title/Title';
+import { Skill } from 'components/skills/skill/Skill';
 
 import styles from './Skills.module.scss';
 

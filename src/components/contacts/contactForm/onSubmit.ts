@@ -1,5 +1,5 @@
-import styles from '@components/contacts/contactForm/ContactForm.module.scss';
-import { OnSubmitParamsType } from '@components/contacts/contactForm/types';
+import styles from './ContactForm.module.scss';
+import { OnSubmitParamsType } from './types';
 
 export const onSubmit = (params: OnSubmitParamsType) => {
   const { values, setIsPreloaderVisible, setIsFormHasBeenSubmitted, setIsErrorSendForm } =

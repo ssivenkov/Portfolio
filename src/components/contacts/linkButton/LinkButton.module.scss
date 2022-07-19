@@ -1,4 +1,4 @@
-@import '/src/App';
+@import 'src/App.module';
 
 .linkButton {
     display: flex;
@@ -16,7 +16,7 @@
         font-size: 30px;
         font-weight: 600;
         font-family: "Hind Siliguri", sans-serif;
-        line-height: 1.1;
+        line-height: 1.05;
         padding: 10px 69px 10px 19px;
     }
     &Icon {

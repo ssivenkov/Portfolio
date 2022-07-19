@@ -1,7 +1,4 @@
-import {
-  errorObjectType,
-  ValidationParamsType,
-} from '@components/contacts/contactForm/types';
+import { errorObjectType, ValidationParamsType } from './types';
 
 export const validation = (params: ValidationParamsType) => {
   const { values, setCurrentError, minLength } = params;

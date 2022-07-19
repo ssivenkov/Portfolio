@@ -1,8 +1,7 @@
 import React from 'react';
 
-import { ProjectPropsType } from '@components/projects/project/types';
-
 import styles from './Project.module.scss';
+import { ProjectPropsType } from './types';
 
 export const Project = (props: ProjectPropsType) => {
   const { title, description, technologies, imageLink, projectLink } = props;

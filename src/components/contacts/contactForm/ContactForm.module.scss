@@ -1,4 +1,4 @@
-@import '/src/App';
+@import 'src/App.module';
 
 .wrapperContainer {
     width: 100%;
@@ -132,8 +132,8 @@
     }
 
     .errorText {
-        @include adaptive-value("padding-bottom", 900, 15, 10, px, 1);
-        @include adaptive-value("padding-top", 900, 15, 10, px, 1);
+        @include adaptiveWidth("padding-bottom", 900, $minWidth, 15, 10, px, 1);
+        @include adaptiveWidth("padding-top", 900, $minWidth, 15, 10, px, 1);
     }
 }
 @media (pointer:fine) {

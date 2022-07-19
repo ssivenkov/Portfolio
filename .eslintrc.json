@@ -6,25 +6,7 @@
     "amd": true,
     "node": true
   },
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:jsx-a11y/recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:import/typescript",
-    "plugin:@typescript-eslint/recommended",
-    "prettier"
-  ],
-  "ignorePatterns": ["craco.config.js"],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaFeatures": {"jsx": true},
-    "ecmaVersion": "latest",
-    "sourceType": "module",
-    "project": ["./tsconfig.json"]
-  },
+  "root": true,
   "plugins": [
     "react",
     "react-hooks",
@@ -33,12 +15,31 @@
     "@typescript-eslint",
     "prettier"
   ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "prettier"
+  ],
+  "ignorePatterns": ["src/**/*.test.ts"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {"jsx": true},
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
   "rules": {
     // prettier
-    "prettier/prettier": ["error", { "endOfLine": "auto", "arrowParens": "always" }],
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
 
     // typescript
     "@typescript-eslint/no-var-requires": "error",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
 
     // react
     "react/boolean-prop-naming": ["error", {
@@ -51,7 +52,7 @@
       "namedComponents": "arrow-function",
       "unnamedComponents": "arrow-function"
     }],
-    "react/hook-use-state": "error",
+    "react/hook-use-state": "off",
     "react/no-array-index-key": "error",
     "react/no-arrow-function-lifecycle": "error",
     "react/no-danger": "error",
@@ -229,7 +230,7 @@
     // imports
     "no-duplicate-imports": "error",
     "import/no-unresolved": "off",
-    "import/no-extraneous-dependencies": "error",
+    "import/no-extraneous-dependencies": "off",
     "import/default": "off",
     "import/namespace": "off",
     "import/order": [

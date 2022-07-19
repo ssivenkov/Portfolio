@@ -1,8 +1,7 @@
 import React from 'react';
 
-import { LinkButtonPropsType } from '@components/contacts/linkButton/types';
-
 import styles from './LinkButton.module.scss';
+import { LinkButtonPropsType } from './types';
 
 export const LinkButton = (props: LinkButtonPropsType) => {
   const { link, title, FontawesomeIconClass } = props;

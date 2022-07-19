@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Title } from '@components/common/Title/Title';
-import { ContactForm } from '@components/contacts/contactForm/ContactForm';
-import { LinkButton } from '@components/contacts/linkButton/LinkButton';
+import { Title } from 'components/common/title/Title';
+import { ContactForm } from 'components/contacts/contactForm/ContactForm';
+import { LinkButton } from 'components/contacts/linkButton/LinkButton';
 
 import styles from './Contacts.module.scss';
 
@@ -18,7 +18,7 @@ export const Contacts = () => (
         />
         <LinkButton
           FontawesomeIconClass='fa-telegram'
-          link='https://t.me/sergei_sivenkov'
+          link='https://t.me/orihiru'
           title='Telegram'
         />
         <LinkButton

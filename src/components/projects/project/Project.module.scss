@@ -1,4 +1,4 @@
-@import '/src/App';
+@import 'src/App.module';
 
 .generalContainer {
     display: grid;
@@ -40,7 +40,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 8px 15px 1px 15px;
+    padding: 15px 15px 7px;
     font-size: 22px;
     font-family: "Hind Siliguri", sans-serif;
     text-align: center;
@@ -73,7 +73,7 @@
     font-size: 20px;
     font-weight: 700;
     text-align: justify;
-    padding: 2px 20px;
+    padding: 8px 20px;
     @include no-select;
 }
 @media (pointer:coarse) {
@@ -95,10 +95,10 @@
     }
 
     .descriptionText {
-        @include adaptive-value("font-size", 900, 16, 14, px, 1);
+        @include adaptiveWidth("font-size", 900, $minWidth, 16, 14, px, 1);
     }
 
     .image {
-        @include adaptive-value("height", 900, 250, 210, px, 1);
+        @include adaptiveWidth("height", 900, $minWidth, 250, 210, px, 1);
     }
 }

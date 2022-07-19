@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
-import { Preloader } from '@components/common/Preloader/Preloader';
-import { onSubmit } from '@components/contacts/contactForm/onSubmit';
-import { validation } from '@components/contacts/contactForm/validation';
+import { Preloader } from 'components/common/preloader/Preloader';
+import { onSubmit } from 'components/contacts/contactForm/onSubmit';
+import { validation } from 'components/contacts/contactForm/validation';
 import { Formik } from 'formik';
 
 import styles from './ContactForm.module.scss';

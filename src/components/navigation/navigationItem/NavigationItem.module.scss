@@ -1,4 +1,4 @@
-@import '/src/App';
+@import 'src/App.module';
 
 .itemContainer {
   display: flex;
@@ -32,8 +32,8 @@
 
 @media screen and (max-width: 800px) {
   .itemContainer {
-    @include adaptive-value("font-size", 800, 26, 20, px, 1);
-    @include adaptive-value("padding-left", 800, 30, 8, px, 1);
-    @include adaptive-value("padding-right", 800, 30, 8, px, 1);
+    @include adaptiveWidth("font-size", 800, $minWidth, 26, 20, px, 1);
+    @include adaptiveWidth("padding-left", 800, $minWidth, 30, 8, px, 1);
+    @include adaptiveWidth("padding-right", 800, $minWidth, 30, 8, px, 1);
   }
 }

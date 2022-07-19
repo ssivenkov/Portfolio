@@ -1,4 +1,4 @@
-@import '/src/App';
+@import 'src/App.module';
 
 .homeWrapper {
     display: flex;
@@ -105,12 +105,12 @@
 
 @media screen and (max-width: 800px) {
     .firstLine {
-        @include adaptive-value("font-size", 800, 56, 25, px, 1);
+        @include adaptiveWidth("font-size", 800, $minWidth, 56, 25, px, 1);
     }
 
     .secondLine {
-        @include adaptive-value("font-size", 800, 24, 15, px, 1);
-        @include adaptive-value("margin-top", 800, 12, 6, px, 1);
+        @include adaptiveWidth("font-size", 800, $minWidth, 24, 15, px, 1);
+        @include adaptiveWidth("margin-top", 800, $minWidth, 12, 6, px, 1);
     }
 
     .downloadButton {
@@ -121,7 +121,7 @@
 
 @media screen and (max-width: 360px) {
     .photo {
-        @include adaptive-value("min-width", 360, 200, 180, px, 1);
-        @include adaptive-value("min-height", 360, 200, 180, px, 1);
+        @include adaptiveWidth("min-width", 360, $minWidth, 200, 180, px, 1);
+        @include adaptiveWidth("min-height", 360, $minWidth, 200, 180, px, 1);
     }
 }

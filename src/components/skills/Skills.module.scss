@@ -1,4 +1,4 @@
-@import '/src/App';
+@import 'src/App.module';
 
 .componentWrapper {
     display: flex;
@@ -25,6 +25,6 @@
 
 @media screen and (max-width: 1480px) {
     .contentContainer {
-        @include adaptive-value("max-width", 1480, 70, 90, vw, 1);
+        @include adaptiveWidth("max-width", 1480, $minWidth, 70, 90, vw, 1);
     }
 }
