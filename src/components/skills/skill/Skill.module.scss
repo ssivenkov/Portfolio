@@ -15,10 +15,11 @@
 }
 
 .image {
-    width: 90px;
+    width: 140px;
     height: 90px;
     @include no-select;
     margin-top: 20px;
+    object-fit: contain;
 }
 
 .title {
@@ -31,6 +32,11 @@
     padding: 15px 10px;
 }
 
+.titleWithoutTopPadding {
+    @extend .title;
+    padding: 0 15px 10px;
+}
+
 @media screen and (max-width: 480px) {
     .generalContainer {
         @include adaptiveWidth("width", 480, $minWidth, 175, 120, px, 1);
@@ -38,8 +44,8 @@
     }
 
     .image {
-        @include adaptiveWidth("width", 480, $minWidth, 90.5, 63.5, px, 1);
-        @include adaptiveWidth("height", 480, $minWidth, 90.5, 63.5, px, 1);
+        @include adaptiveWidth("width", 480, $minWidth, 140, 90, px, 1);
+        @include adaptiveWidth("height", 480, $minWidth, 90, 63.5, px, 1);
     }
 
     .title {

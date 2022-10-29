@@ -72,6 +72,8 @@
     background-color: var(--background_dark);
     border: 2px solid var(--primary);
     @include no-select;
+    text-align: center;
+    word-break: break-all;
 }
 
 .errorContainer {
