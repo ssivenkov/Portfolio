@@ -31,7 +31,11 @@ export const Skills = () => (
         <Skill imageLink={HTML} title='HTML' />
         <Skill imageLink={CSS} title='CSS' />
         <Skill imageLink={SASS} title='SASS' />
-        <Skill imageLink={StyledComponents} title='Styled components' withoutTopPadding />
+        <Skill
+          imageLink={StyledComponents}
+          title='Styled components'
+          withoutTopPadding={true}
+        />
         <Skill imageLink={JS} title='JavaScript' />
         <Skill imageLink={TS} title='TypeScript' />
         <Skill imageLink={ReactJS} title='React' />

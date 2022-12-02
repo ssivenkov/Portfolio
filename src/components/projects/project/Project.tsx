@@ -24,7 +24,7 @@ export const Project = (props: ProjectPropsType) => {
         <div className={styles.imageViewerContainer}>
           <ImageViewer
             backgroundStyle={{ backgroundColor: 'var(--background)' }}
-            closeOnClickOutside
+            closeOnClickOutside={true}
             currentIndex={0}
             onClose={closeImageViewer}
             src={[imageLink]}
