@@ -41,6 +41,7 @@
 .descriptionContainer {
     width: 100%;
     background-color: var(--background_light);
+    padding-bottom: 8px;
 }
 
 .title {
@@ -49,11 +50,11 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 15px 15px 7px;
+    padding: 15px 15px 0;
     font-size: 22px;
     font-family: "Hind Siliguri", sans-serif;
     text-align: center;
-    word-break: break-all;
+    word-break: break-word;
     color: var(--text);
 }
 
@@ -63,39 +64,65 @@
     align-items: flex-start;
     justify-content: center;
     width: 100%;
-    padding: 0 15px 10px 15px;
+    padding: 7px 15px 0 15px;
     font-size: 16px;
     font-family: "Lato", sans-serif;
     line-height: 1.5;
     text-align: justify;
-    word-break: break-all;
+    word-break: break-word;
     color: var(--text);
 }
 
-.buttonTitle {
+.buttonsContainer {
+    width: 100%;
+    background-color: var(--background_light);
+    overflow: hidden;
+    border-radius: 0 0 10px 10px;
+}
+
+.viewButton {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    border-radius: 0 0 10px 10px;
     background: linear-gradient(0deg, var(--primary_dark), var(--primary_medium));
     color: var(--text);
     font-family: "Hind Siliguri", sans-serif;
     font-size: 20px;
     font-weight: 700;
-    text-align: justify;
-    word-break: break-all;
+    text-align: center;
+    word-break: break-word;
     padding: 8px 20px;
     @include no-select;
 }
+
+.googlePlayButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--background_light);
+    padding: 8px;
+    @include no-select;
+    &:hover {
+        background: #7334CB;
+    }
+}
+
+.googlePlayImage {
+    max-width: 172px;
+    width: 100%;
+    object-fit: cover;
+}
+
 @media (pointer:coarse) {
-    .buttonTitle:active {
+    .viewButton:active {
         background: linear-gradient(0deg, var(--primary_half-medium), var(--primary));
         text-shadow: 0 0 3px var(--primary_dark), 0 0 6px var(--primary_dark), 0 0 15px var(--primary_light);
     }
 }
 @media (pointer:fine) {
-    .buttonTitle:hover {
+    .viewButton:hover {
         background: linear-gradient(0deg, var(--primary_half-medium), var(--primary));
         text-shadow: 0 0 3px var(--primary_dark), 0 0 6px var(--primary_dark), 0 0 15px var(--primary_light);
     }
