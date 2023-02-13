@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.d4e2ba70.css",
-    "main.js": "/Portfolio/static/js/main.f37aa47f.js",
-    "static/media/ToDoListReactNative.png": "/Portfolio/static/media/ToDoListReactNative.127523c37c2b01c8accf.png",
+    "main.js": "/Portfolio/static/js/main.bb49c9cc.js",
+    "static/media/ToDoListReactNative.png": "/Portfolio/static/media/ToDoListReactNative.0096a00e4dcf86b058a0.png",
     "static/media/bg.jpg": "/Portfolio/static/media/bg.0e16ac18d2607d0275e6.jpg",
     "static/media/SocialNetwork.png": "/Portfolio/static/media/SocialNetwork.0de197cfa9187b3b1fa0.png",
     "static/media/Veltry.jpg": "/Portfolio/static/media/Veltry.f084d81d251bae58e6c5.jpg",
@@ -17,6 +17,7 @@
     "static/media/React.svg": "/Portfolio/static/media/React.ca077551190eebdc265f1660419e4770.svg",
     "static/media/SASS.svg": "/Portfolio/static/media/SASS.c60d9048a8126e951f169594e0d54652.svg",
     "static/media/preloader.svg": "/Portfolio/static/media/preloader.bea28493bbe220a4d76dc3c1ccc76073.svg",
+    "static/media/Google_Play.webp": "/Portfolio/static/media/Google_Play.77338987a8ca06e38571.webp",
     "static/media/Jest.svg": "/Portfolio/static/media/Jest.428ced5d8ae7df60a180a97011f8ab80.svg",
     "static/media/Formik.svg": "/Portfolio/static/media/Formik.1b4e0840be4c64f5fc4e4d850fb4bd49.svg",
     "static/media/Redux-Saga.svg": "/Portfolio/static/media/Redux-Saga.c12636f11b53f4a0bdb1a32fc062ad6c.svg",
@@ -32,10 +33,10 @@
     "static/media/CSS.svg": "/Portfolio/static/media/CSS.85f361fbb2bd19e3186d37fe7639a21d.svg",
     "index.html": "/Portfolio/index.html",
     "main.d4e2ba70.css.map": "/Portfolio/static/css/main.d4e2ba70.css.map",
-    "main.f37aa47f.js.map": "/Portfolio/static/js/main.f37aa47f.js.map"
+    "main.bb49c9cc.js.map": "/Portfolio/static/js/main.bb49c9cc.js.map"
   },
   "entrypoints": [
     "static/css/main.d4e2ba70.css",
-    "static/js/main.f37aa47f.js"
+    "static/js/main.bb49c9cc.js"
   ]
 }
