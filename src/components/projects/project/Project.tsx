@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 
-import GetItOnGooglePlay from 'assets/images/other/Google_Play.png';
+import GetItOnGooglePlay from 'assets/images/other/Google_Play.webp';
 import ImageViewer from 'react-simple-image-viewer';
 
 import styles from './Project.module.scss';

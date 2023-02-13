@@ -19,7 +19,7 @@ export const Projects = () => (
       <Title title='Projects' />
       <div className={styles.projectsContainer}>
         <Project
-          description='Mobile task management application for Android and iOS. Implemented: task management, screens for todo tasks and for done tasks, receiving tasks notification at a certain date and time, notepad, sign in with Google, user data storage and synchronizing with cloud database, internet connection checking, app accent color picker, delete account, change app language, dark mode, splash screen.'
+          description='Mobile task management application for Android and iOS. Implemented: task management, screens for todo tasks and for done tasks, receiving tasks notification at a certain date and time, notepad, sign in with Google and Facebook, user data storage and synchronizing with cloud database, internet connection checking, app accent color picker, account deleting, changing app language, dark mode, ability to share and rate app, splash screen.'
           googlePlayLink='https://play.google.com/store/apps/details?id=com.jetteam.todolist'
           imageLink={TodolistRN}
           projectLink='https://github.com/ssivenkov/ToDoList-React-Native'
